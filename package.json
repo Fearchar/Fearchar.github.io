@@ -1,5 +1,5 @@
 {
-  "name": "ga-project-2-react-api",
+  "name": "Fearchar-MacLean-portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Fearchar/ga-project-2-react-api.git"
+    "url": "git+https://github.com/Fearchar/fearchar.github.io.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Fearchar/ga-project-2-react-api/issues"
+    "url": "https://github.com/Fearchar/fearchar.github.io/issues"
   },
-  "homepage": "https://github.com/Fearchar/ga-project-2-react-api#readme",
+  "homepage": "https://github.com/Fearchar/fearchar.github.io#readme",
   "dependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
