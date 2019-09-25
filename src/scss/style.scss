@@ -20,7 +20,8 @@ $tertinary-colour: #fafafa;
 $light-font: $tertinary-colour;
 
 // font sizes
-$font-xl: 100px;
+$font-xxl: 100px;
+$font-xl: 80px;
 $font-l: 60px;
 $font-m: 40px;
 $font-s: 20px;
@@ -41,13 +42,17 @@ body {
     padding: $spacing-m;
   }
 
+  i {
+    font-size: $font-xl;
+  }
+
   h1, h2, h3, h4, p, figure {
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
   }
 
   h1 {
-    font-size: $font-xl;
+    font-size: $font-xxl;
   }
 
   h3 {

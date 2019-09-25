@@ -1,8 +1,10 @@
 import React from 'react'
 
-import TechIcon from './TechIcon'
+import { bioText, techs } from '../content/bio'
+import Technology from './Technology'
 
-const Bio = () => {
+const BioSection = () => {
+
   return (
     <section className="bio">
       <div>
@@ -14,21 +16,23 @@ const Bio = () => {
       <div>
         <h3>Bio</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {bioText}
         </p>
       </div>
       <div className="vr" />
       <div>
         <h3>Tech</h3>
         <div>
-          <TechIcon
-            name="JavaScript"
-            iconName="js-square"
-          />
+          {techs.map((tech, i) =>
+            <Technology
+              key={i}
+              {...tech}
+            />
+          )}
         </div>
       </div>
     </section>
   )
 }
 
-export default Bio
+export default BioSection

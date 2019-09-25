@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import './scss/style.scss'
 
 import Hero from './components/Hero'
-import Bio from './components/Bio'
+import BioSection from './components/Bio'
 
 class App extends React.Component {
 
@@ -14,7 +14,7 @@ class App extends React.Component {
           <Hero />
         </header>
         <main>
-          <Bio />
+          <BioSection />
         </main>
       </div>
     )
