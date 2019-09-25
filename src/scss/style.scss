@@ -1,0 +1,43 @@
+// colour variables
+$primary-colour: #1b1b1b;
+$secondary-colour: #3e6392f2;
+$tertinary-colour: #fafafa;
+$light-font: $tertinary-colour;
+
+// font sizes
+$xl-font: 100px;
+$l-font: 60px;
+$m-font: 40px;
+$s-font: 20px;
+
+body {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  background-color: $secondary-colour;
+
+  h1, h2, h2, h4, p {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: $xl-font;
+  }
+
+  h2 {
+    font-size: $l-font;
+  }
+
+  p {
+    font-size: $s-font;
+  }
+
+  header {
+
+    div.banner {
+      background-color: #1b1b1b;
+      text-align: center;
+      color: $light-font;
+    }
+  }
+}
