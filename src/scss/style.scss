@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Arvo|BioRhyme|Bitter|Montserrat|Nunito|Roboto|Rubik|Source+Sans+Pro|Spectral|Ubuntu&display=swap');
+
+// font-family: 'Alegreya', serif;
+// font-family: 'BioRhyme', serif;
+// font-family: 'Bitter', serif;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Spectral', serif;
+// font-family: 'Rubik', sans-serif;
+// font-family: 'Source Sans Pro', sans-serif;
+// font-family: 'Arvo', serif;
+// font-family: 'Nunito', sans-serif;
+
+
 // colour variables
 $primary-colour: #1b1b1b;
 $secondary-colour: #3e6392f2;
@@ -5,39 +20,87 @@ $tertinary-colour: #fafafa;
 $light-font: $tertinary-colour;
 
 // font sizes
-$xl-font: 100px;
-$l-font: 60px;
-$m-font: 40px;
-$s-font: 20px;
+$font-xl: 100px;
+$font-l: 60px;
+$font-m: 40px;
+$font-s: 20px;
+
+//structure
+$spacing-s: 20px;
+$spacing-m: $spacing-s * 2;
+$section-height: 100vh;
 
 body {
   box-sizing: border-box;
-  height: 100%;
+  width: 100vw;
   margin: 0;
-  background-color: $secondary-colour;
+  background-color: $primary-colour;
 
-  h1, h2, h2, h4, p {
+  section {
+    height: $section-height;
+    padding: $spacing-m;
+  }
+
+  h1, h2, h3, h4, p, figure {
     margin: 0;
+    font-family: 'Ubuntu', sans-serif;
   }
 
   h1 {
-    font-size: $xl-font;
+    font-size: $font-xl;
   }
 
-  h2 {
-    font-size: $l-font;
+  h3 {
+    font-size: $font-l;
   }
 
   p {
-    font-size: $s-font;
+    font-size: $font-s;
   }
 
   header {
 
     div.banner {
-      background-color: #1b1b1b;
       text-align: center;
+      background-color: #1b1b1b;
       color: $light-font;
+    }
+  }
+
+  main {
+
+    section.bio {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: $secondary-colour;
+
+      > :not(.vr) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 80%;
+        width: (100% / 3);
+        padding: $spacing-m;
+
+        h3 {
+          height: 10%;
+        }
+
+        > p, > div {
+          padding-top: $spacing-m;
+          height: 90%;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      div.vr {
+        height: 40%;
+        border-left: 2px solid $primary-colour;
+      }
     }
   }
 }

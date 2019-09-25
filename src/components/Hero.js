@@ -5,6 +5,8 @@ const Hero = () => {
     <div className="banner">
       <h1>Fearchar</h1>
       <h2>MacLean</h2>
+      <p>Full Stack Developer</p>
+      <p>with a passion for tabletop gaming, music and literature</p>
       <div>
         <p>github: blah</p>
         <p>linkedIn: blah</p>
