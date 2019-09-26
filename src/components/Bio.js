@@ -7,22 +7,20 @@ const BioSection = () => {
 
   return (
     <section className="bio">
-      <div>
+      <div className="subsection">
         <figure>
           <img src="../images/Fearchar-5.jpg" alt="Fearchar MacLean"/>
         </figure>
       </div>
-      <div className="vr" />
-      <div>
-        <h3>Bio</h3>
+      <div className="subsection">
+        <h3>My Bio</h3>
         <p>
           {bioText}
         </p>
       </div>
-      <div className="vr" />
-      <div>
+      <div className="subsection">
         <h3>Tech</h3>
-        <div>
+        <div className="techs">
           {techs.map((tech, i) =>
             <Technology
               key={i}
