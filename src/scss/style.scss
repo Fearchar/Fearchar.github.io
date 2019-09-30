@@ -13,26 +13,31 @@
 // font-family: 'Nunito', sans-serif;
 
 
-// colour variables
-$primary-colour: #1b1b1b;
-$secondary-colour: #3e6392f2;
+// Colour Variables
+$primary-colour: #272727;
+$secondary-colour: #4a6f9e;
 $tertinary-colour: #fafafa;
 $light-font: $tertinary-colour;
 
-// font sizes
+// Text
 $font-xxl: 100px;
 $font-xl: 80px;
 $font-l: 60px;
 $font-m: 40px;
+$font-ms: 30px;
 $font-s: 20px;
 $font-xs: 5px;
+$font-colour-primary: black;
 
-//structure
+// Structure
 $spacing-xs: 10px;
 $spacing-s: 20px;
 $spacing-m: 40px;
-$section-height-m: 600px;
-$section-height-l: 600px;
+$section-height-m: 800px;
+
+// Media Query
+$width-tablet: 650px;
+$width-desktop: 1000px;
 
 * {
   box-sizing: border-box;
@@ -48,13 +53,17 @@ body {
     padding: $spacing-m;
   }
 
-  h1, h2, h3, h4, p, figure {
+  h1, h2, h3, h4, p, figure, {
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
   }
 
-  h1 {
-    font-size: $font-xxl;
+  h2:not(.hero) {
+    font-size: $font-l;
+
+    @media(min-width: $width-tablet) {
+      font-size: $font-xxl;
+    }
   }
 
   h3 {
@@ -65,31 +74,65 @@ body {
     font-size: $font-s;
   }
 
-  header {
+  div.banner {
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: center;
+    justify-content: center;
+    color: $light-font;
+    height: 200px;
 
-    div.banner {
-      flex-flow: nowrap column;
-      text-align: center;
-      background-color: #1b1b1b;
-      color: $light-font;
+    @media(min-width: $width-tablet) {
+      height: 250px;
     }
+
+    &.hero {
+      height: 300px;
+
+      h1 {
+        font-size: $font-m;
+
+        @media(min-width: $width-tablet) {
+          font-size: $font-xl;
+        }
+
+        @media(min-width: $width-desktop) {
+          font-size: $font-xxl;
+        }
+      }
+
+      h2 {
+        font-size: $font-ms;
+
+        @media(min-width: $width-tablet) {
+          font-size: $font-m;
+        }
+
+        @media(min-width: $width-desktop) {
+          font-size: $font-l;
+        }
+      }
+    }
+  }
+
+  header {
   }
 
   main {
 
-    section.bio {
+    section {
       flex-flow: wrap row;
       align-items: center;
       width: 100%;
       background-color: $secondary-colour;
 
-      @media(min-width: 500px) {
+      @media(min-width: $width-tablet) {
         padding: 0;
       }
 
-      @media(min-width: 800px) {
+      @media(min-width: $width-desktop) {
         flex-flow: nowrap row;
-        height: $section-height-l;
+        height: $section-height-m;
       }
 
 
@@ -104,7 +147,7 @@ body {
         padding-top: $spacing-s;
         padding-bottom: $spacing-m;
 
-        @media(min-width: 500px) {
+        @media(min-width: $width-tablet) {
           padding: $spacing-m;
           width: 50%;
 
@@ -113,14 +156,20 @@ body {
           }
         }
 
-        @media(min-width: 800px) {
+        @media(min-width: $width-desktop) {
+          height: 75%;
           &, &:nth-child(3) {
             width: (100% / 3);
           }
         }
 
-        img {
-          width: 100%;
+        figure {
+          height: 100%;
+
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
         }
 
         h3 {
@@ -143,12 +192,9 @@ body {
             }
           }
 
-          @media(min-width: 800px) {
+          @media(min-width: $width-desktop) {
             div {
               width: 25%;
-              i {
-                font-size: $font-m;
-              }
             }
           }
         }

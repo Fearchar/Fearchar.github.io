@@ -2,11 +2,11 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div className="banner">
-      <h1>Fearchar</h1>
-      <h2>MacLean</h2>
-      <p>Full Stack Developer</p>
-      <p>with a passion for tabletop gaming, music and literature</p>
+    <div className="hero banner">
+      <h1>Fearchar MacLean</h1>
+      <h2>Full Stack Developer</h2>
+      <p>with a passion for tabletop gaming,</p>
+      <p>music and literature</p>
       <div>
         <p>github: blah</p>
         <p>linkedIn: blah</p>
