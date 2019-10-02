@@ -35,6 +35,11 @@ body {
   margin: 0;
   background-color: $primary-colour;
 
+  #root div.temp {
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
   section {
     display: flex;
     padding: $spacing-m;
@@ -84,6 +89,10 @@ body {
 
     &.hero {
       height: 300px;
+
+      &.full {
+        height: 100vh;
+      }
 
       h1 {
         font-size: $font-m;

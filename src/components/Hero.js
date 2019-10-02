@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Hero = () => {
+  const [isFull, setIsFull] = useState(true)
+  const heroRef = React.createRef()
+
+  function manageFullHeight() {
+    // const hero = heroRef.current
+    const scrollTop = window.pageYOffset
+    console.log(scrollTop)
+    if (scrollTop > 0) setIsFull(false)
+    else setIsFull(true)
+  }
+
   return (
-    <div className="hero banner">
+    <div
+      className={`hero banner ${isFull && 'full'}`}
+      ref={heroRef}
+      onScroll={manageFullHeight}
+    >
       <h1>Fearchar MacLean</h1>
       <h2>Full Stack Developer</h2>
       <p>with a passion for tabletop gaming,</p>

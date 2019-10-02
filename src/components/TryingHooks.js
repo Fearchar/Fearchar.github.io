@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
 const TryingHooks = () => {
-  const [gurlNum, setGurlNum] = useState(0)
+  const [worldNum, setWorldNum] = useState(0)
   return (
     <h1
-      onClick={() => setGurlNum(gurlNum + 1)}
-    >{`Hello ${'World' + 's'.repeat(gurlNum)}!`}</h1>
+      onClick={() => setWorldNum(worldNum + 1)}
+    >{`Hello ${'World' + 's'.repeat(worldNum)}!`}</h1>
   )
 }
 
