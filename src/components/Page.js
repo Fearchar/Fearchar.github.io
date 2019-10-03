@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { createRef, useState } from 'react'
 
 import Hero from './Hero'
 import About from './About'
@@ -7,7 +7,7 @@ import Expirience from './Expirience'
 
 const Page = () => {
   const [isHeroFull, setIsHeroFull] = useState(true)
-  const pageRef = React.createRef()
+  const pageRef = createRef()
 
   function manageFullHeight() {
     const atTop = pageRef.current.scrollTop <= 5 ? true : false

@@ -88,11 +88,14 @@ body {
     @media(min-width: $width-tablet) {
       height: 250px;
     }
+  }
 
-    &.hero {
+  header {
+
+    .hero {
       height: 300px;
       margin-top: $spacing-xl;
-      margin-bottom: $spacing-l;
+      margin-bottom: $spacing-m;
       transition: all 0.5s;
 
       &.full {
@@ -102,6 +105,16 @@ body {
 
       h1 {
         font-size: $font-m;
+
+        span {
+          position: relative;
+          top: 0;
+          transition: all 0.3s;
+
+          &.raise {
+            top: -20px;
+          }
+        }
 
         @media(min-width: $width-tablet) {
           font-size: $font-xl;
@@ -152,9 +165,6 @@ body {
         }
       }
     }
-  }
-
-  header {
   }
 
   main {
