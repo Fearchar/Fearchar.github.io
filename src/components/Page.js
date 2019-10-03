@@ -7,17 +7,17 @@ import Expirience from './Expirience'
 
 const Page = () => {
   const [isHeroFull, setIsHeroFull] = useState(true)
-  const heroRef = React.createRef()
+  const pageRef = React.createRef()
 
   function manageFullHeight() {
-    const atTop = heroRef.current.scrollTop === 0 ? true : false
+    const atTop = pageRef.current.scrollTop <= 5 ? true : false
     setIsHeroFull(atTop)
   }
 
   return (
     <div
-      ref={heroRef}
-      className="temp"
+      ref={pageRef}
+      className="page"
       onScroll={manageFullHeight}
     >
       <header>

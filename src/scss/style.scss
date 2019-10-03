@@ -30,7 +30,6 @@ $width-desktop: 1000px;
 
 * {
   box-sizing: border-box;
-  transition: all 0.5s;
 }
 
 body {
@@ -38,7 +37,7 @@ body {
   margin: 0;
   background-color: $primary-colour;
 
-  #root div.temp {
+  #root div.page {
     height: 100vh;
     overflow-y: scroll;
   }
@@ -93,7 +92,8 @@ body {
     &.hero {
       height: 300px;
       margin-top: $spacing-xl;
-      margin-bottom: $spacing-m;
+      margin-bottom: $spacing-l;
+      transition: all 0.5s;
 
       &.full {
         height: 100vh;
