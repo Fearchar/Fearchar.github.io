@@ -20,6 +20,8 @@ $font-colour-primary: black;
 $spacing-xs: 10px;
 $spacing-s: 20px;
 $spacing-m: 40px;
+$spacing-l: 60px;
+$spacing-xl: 100px;
 $section-height-m: 800px;
 
 // Media Query
@@ -28,6 +30,7 @@ $width-desktop: 1000px;
 
 * {
   box-sizing: border-box;
+  transition: all 0.5s;
 }
 
 body {
@@ -89,9 +92,12 @@ body {
 
     &.hero {
       height: 300px;
+      margin-top: $spacing-xl;
+      margin-bottom: $spacing-m;
 
       &.full {
         height: 100vh;
+        margin: 0;
       }
 
       h1 {

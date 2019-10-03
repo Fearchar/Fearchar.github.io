@@ -1,22 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Hero = () => {
-  const [isFull, setIsFull] = useState(true)
-  const heroRef = React.createRef()
-
-  function manageFullHeight() {
-    // const hero = heroRef.current
-    const scrollTop = window.pageYOffset
-    console.log(scrollTop)
-    if (scrollTop > 0) setIsFull(false)
-    else setIsFull(true)
-  }
+const Hero = ({ isHeroFull }) => {
 
   return (
     <div
-      className={`hero banner ${isFull && 'full'}`}
-      ref={heroRef}
-      onScroll={manageFullHeight}
+      className={`hero banner ${isHeroFull && 'full'}`}
     >
       <h1>Fearchar MacLean</h1>
       <h2>Full Stack Developer</h2>
@@ -25,7 +13,7 @@ const Hero = () => {
       <div>
         <a href="https://github.com/Fearchar">
           <i className="devicon-github-plain"></i>
-          <p>/Fearchar</p>
+          <p>/fearchar</p>
         </a>
         <a href="https://www.linkedin.com/in/fearchar/">
           <i className="fab fa-linkedin"></i>

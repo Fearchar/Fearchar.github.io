@@ -2,39 +2,28 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './scss/style.scss'
 
-import Hero from './components/Hero'
-import About from './components/About'
-import Banner from './components/Banner'
-import Expirience from './components/Expirience'
+import Page from './components/Page'
 
 class App extends React.Component {
   constructor() {
     super()
+    this.state = {
+      isHeroFull: true
+    }
     this.heroRef = React.createRef()
-
     this.manageFullHeight = this.manageFullHeight.bind(this)
   }
 
   manageFullHeight() {
-    // const hero = heroRef.current
     const scrollTop = this.heroRef.current.scrollTop
-    console.log(scrollTop)
-    // if (scrollTop > 0) setIsFull(false)
-    // else setIsFull(true)
+    let isHeroFull = false
+    if (scrollTop === 0) isHeroFull = true
+    this.setState({ isHeroFull })
   }
 
   render () {
     return (
-      <div className="temp" ref={this.heroRef} onScroll={this.manageFullHeight}>
-        <header>
-          <Hero />
-        </header>
-        <main>
-          <About />
-          <Banner title="Expirience" />
-          <Expirience />
-        </main>
-      </div>
+      <Page />
     )
   }
 }
