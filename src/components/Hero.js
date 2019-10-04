@@ -3,25 +3,22 @@ import React, { createRef } from 'react'
 const Hero = ({ isHeroFull }) => {
   const h1Ref = createRef()
 
-  function mexicanWave() {
-    const charSpans = h1Ref.current.children
-
-    function cycleTimeout(length, repetitions, i=0) {
+  function textWhipAnimation(ref, repetitions=2) {
+    const charSpans = ref.current.children
+    for (let i = 0; i < repetitions * charSpans.length * 2; i++) {
       setTimeout(() => {
-        const charSpan = charSpans[i % length]
-        if (i === length * repetitions * 2) return
+        const charSpan = charSpans[i % charSpans.length]
+        console.log(!charSpan.classList.contains('raise'))
         if (!charSpan.classList.contains('raise')) charSpan.classList.add('raise')
         else (charSpan.classList.remove('raise'))
-        cycleTimeout(length, repetitions, i+1)
-      }, 20)
+      }, 20 * i)
     }
-    cycleTimeout(charSpans.length, 2)
   }
 
   return (
     <div
       className={`hero banner ${isHeroFull && 'full'}`}
-      onClick={mexicanWave}
+      onClick={() => textWhipAnimation(h1Ref)}
     >
       <h1 ref={h1Ref}>
         <span>F</span>
