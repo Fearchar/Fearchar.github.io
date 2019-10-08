@@ -1,14 +1,15 @@
 import React, { useRef, useState } from 'react'
 
+import Navbar from './Navbar'
 import Hero from './Hero'
-import About from './About'
+import Bio from './Bio'
 import Banner from './Banner'
 import Expirience from './Expirience'
 
 const Page = () => {
   const [isHeroFull, setIsHeroFull] = useState(true)
   const [headingRefs, setHeadingRefs] = useState([])
-  const pageRef = useRef('pageRef')
+  const pageRef = useRef(null)
 
   function manageFullHeight() {
     const atTop = pageRef.current.scrollTop <= 5 ? true : false
@@ -26,11 +27,13 @@ const Page = () => {
       onScroll={manageFullHeight}
     >
       <header>
+        <Navbar displayNav={!isHeroFull}/>
         <Hero isHeroFull={isHeroFull}/>
       </header>
       <main>
-        <About />
+        <Bio />
         <Banner
+          id="expirience"
           heading="Expirience"
           storeRef={storeRef}
         />

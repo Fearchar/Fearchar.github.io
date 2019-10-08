@@ -2,11 +2,11 @@ import React, { useRef, useEffect } from 'react'
 
 import SpanText from './SpanText'
 
-const Banner = ({ heading, storeRef }) => {
-  const h2Ref = useRef('h2Ref')
+const Banner = ({ id, heading, storeRef }) => {
+  const h2Ref = useRef(null)
   useEffect(() => storeRef(h2Ref), [])
   return (
-    <div className="banner">
+    <div className="banner" id={id}>
       <h2 ref={h2Ref}>
         <SpanText text={heading}/>
       </h2>

@@ -3,8 +3,8 @@
 // Colour Variables
 $primary-colour: #272727;
 $secondary-colour: #4a6f9e;
-$tertinary-colour: #fafafa;
-$light-font: $tertinary-colour;
+$tertinary-colour: #353535;
+$light-font: #fafafa;
 
 // Text
 $font-xxl: 100px;
@@ -22,6 +22,7 @@ $spacing-s: 20px;
 $spacing-m: 40px;
 $spacing-l: 60px;
 $spacing-xl: 100px;
+$spacing-xxl: 200px;
 $section-height-m: 800px;
 
 // Media Query
@@ -40,204 +41,232 @@ body {
   #root div.page {
     height: 100vh;
     overflow-y: scroll;
-  }
-
-  section {
-    display: flex;
-    padding: $spacing-m;
-  }
-
-  h1, h2, h3, h4, p, figure, {
-    margin: 0;
-    font-family: 'Ubuntu', sans-serif;
-  }
-
-  h2:not(.hero) {
-    font-size: $font-l;
-
-    @media(min-width: $width-tablet) {
-      font-size: $font-xxl;
-    }
-  }
-
-  h3 {
-    font-size: $font-l;
-  }
-
-  p {
-    font-size: $font-s;
-  }
-
-  a {
-    text-decoration: none;
-    color: inherit;
-
-    &:hover {
-      color: grey;
-    }
-  }
-
-  div.banner {
-    display: flex;
-    flex-flow: nowrap column;
-    align-items: center;
-    justify-content: center;
-    color: $light-font;
-    height: 200px;
-
-    @media(min-width: $width-tablet) {
-      height: 250px;
-    }
-  }
-
-  header {
-
-    .hero {
-      height: 300px;
-      margin-top: $spacing-xl;
-      margin-bottom: $spacing-m;
-      transition: all 0.5s;
-
-      &.full {
-        height: 100vh;
-        margin: 0;
-      }
-
-      h1 {
-        font-size: $font-m;
-
-        span {
-          position: relative;
-          top: 0;
-          transition: all 0.3s;
-
-          &.raise {
-            top: -20px;
-          }
-        }
-
-        @media(min-width: $width-tablet) {
-          font-size: $font-xl;
-        }
-
-        @media(min-width: $width-desktop) {
-          font-size: $font-xxl;
-        }
-      }
-
-      h2 {
-        font-size: $font-ms;
-
-        @media(min-width: $width-tablet) {
-          font-size: $font-m;
-        }
-
-        @media(min-width: $width-desktop) {
-          font-size: $font-l;
-        }
-      }
-
-      > div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        a {
-          display: flex;
-          padding-left: $spacing-s;
-          padding-right: $spacing-s;
-
-          i {
-            position: relative;
-            top: -3px;
-            font-size: $font-ms;
-          }
-
-          p {
-            padding-left: $spacing-xs;
-          }
-        }
-      }
-
-      @media(min-width: $width-tablet) {
-        div {
-          flex-direction: row;
-        }
-      }
-    }
-  }
-
-  main {
 
     section {
-      flex-flow: wrap row;
-      align-items: center;
-      width: 100%;
-      background-color: $secondary-colour;
+      display: flex;
+      padding: $spacing-m;
+    }
+
+    h1, h2, h3, h4, p, a, figure, {
+      margin: 0;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    h2:not(.hero) {
+      font-size: $font-l;
 
       @media(min-width: $width-tablet) {
-        padding: 0;
+        font-size: $font-xxl;
       }
+    }
 
-      @media(min-width: $width-desktop) {
-        flex-flow: nowrap row;
-        height: $section-height-m;
+    h3 {
+      font-size: $font-l;
+    }
+
+    p {
+      font-size: $font-s;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        color: grey;
       }
+    }
 
+    div.banner {
+      display: flex;
+      flex-flow: nowrap column;
+      align-items: center;
+      justify-content: center;
+      color: $light-font;
+      height: 200px;
 
+      @media(min-width: $width-tablet) {
+        height: 250px;
+      }
+    }
 
-      div.subsection {
+    header {
+
+      div:nth-child(1) {
+        position: fixed;
+        top: 0;
+        z-index: 1;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        height: 100%;
+        height: 0;
+        padding: 0;
         width: 100%;
-        padding-top: $spacing-s;
-        padding-bottom: $spacing-m;
+        background-color: $tertinary-colour;
+        opacity: 0;
+        transition: opacity 0.5s;
+        transition: height 0.5s;
+        transition: padding 0.5s;
+
+
+        &.full {
+          height: auto;
+          padding: $spacing-s;
+          opacity: 1;
+          transition: opacity 0.5s;
+        }
+
+        a {
+          padding-right: $spacing-s;
+          font-size: $font-s;
+        }
+      }
+
+      .hero {
+        height: 300px;
+        margin-top: $spacing-l;
+        margin-bottom: $spacing-s;
+        transition: all 0.5s;
+
+        &.full {
+          height: 100vh;
+          margin: 0;
+        }
+
+        h1 {
+          font-size: $font-m;
+
+          span {
+            position: relative;
+            top: 0;
+            transition: all 0.3s;
+
+            &.raise {
+              top: -20px;
+            }
+          }
+
+          @media(min-width: $width-tablet) {
+            font-size: $font-xl;
+          }
+
+          @media(min-width: $width-desktop) {
+            font-size: $font-xxl;
+          }
+        }
+
+        h2 {
+          font-size: $font-ms;
+
+          @media(min-width: $width-tablet) {
+            font-size: $font-m;
+          }
+
+          @media(min-width: $width-desktop) {
+            font-size: $font-l;
+          }
+        }
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          a {
+            display: flex;
+            padding-left: $spacing-s;
+            padding-right: $spacing-s;
+
+            i {
+              position: relative;
+              top: -3px;
+              font-size: $font-ms;
+            }
+
+            p {
+              padding-left: $spacing-xs;
+            }
+          }
+        }
 
         @media(min-width: $width-tablet) {
-          padding: $spacing-m;
-          width: 50%;
-
-          &:nth-child(3) {
-            width: 100%;
+          div {
+            flex-direction: row;
           }
+        }
+      }
+    }
+
+    main {
+
+      section {
+        flex-flow: wrap row;
+        align-items: center;
+        width: 100%;
+        background-color: $secondary-colour;
+
+        @media(min-width: $width-tablet) {
+          padding: 0;
         }
 
         @media(min-width: $width-desktop) {
-          height: 75%;
-          &, &:nth-child(3) {
-            width: (100% / 3);
-          }
+          flex-flow: nowrap row;
+          height: $section-height-m;
         }
 
-        figure {
-          height: 100%;
 
-          img {
-            max-width: 100%;
-            max-height: 100%;
-          }
-        }
 
-        h3 {
-          padding-bottom: $spacing-m;
-        }
-
-        div.techs {
+        div.subsection {
           display: flex;
-          flex-flow: wrap row;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          height: 100%;
+          width: 100%;
+          padding-top: $spacing-s;
+          padding-bottom: $spacing-m;
 
-          div {
+          @media(min-width: $width-tablet) {
+            padding: $spacing-m;
+            width: 50%;
+
+            &:nth-child(3) {
+              width: 100%;
+            }
+          }
+
+          @media(min-width: $width-desktop) {
+            height: 75%;
+            &, &:nth-child(3) {
+              width: (100% / 3);
+            }
+          }
+
+          figure {
+            height: 100%;
+
+            img {
+              max-width: 100%;
+              max-height: 100%;
+            }
+          }
+
+          h3 {
+            padding-bottom: $spacing-m;
+          }
+
+          div.techs {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 25%;
-            padding-bottom: $spacing-s;
+            flex-flow: wrap row;
 
-            i {
-              font-size: $font-l;
+            div {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              width: 25%;
+              padding-bottom: $spacing-s;
+
+              i {
+                font-size: $font-l;
+              }
             }
           }
         }

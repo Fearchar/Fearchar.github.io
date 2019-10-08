@@ -5,11 +5,14 @@ import SpanText from './SpanText'
 
 const Hero = ({ isHeroFull }) => {
 
-  const h1Ref = useRef('h1Ref')
+  const h1Ref = useRef(null)
   useEffect(() => textWhipAnimation(h1Ref), [h1Ref])
 
   return (
-    <div className={`hero banner ${isHeroFull && 'full'}`}>
+    <div
+      id="hero"
+      className={`hero banner ${isHeroFull && 'full'}`}
+    >
       <h1 ref={h1Ref}>
         <SpanText text="Fearchar MacLean" />
       </h1>

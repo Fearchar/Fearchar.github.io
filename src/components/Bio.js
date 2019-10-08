@@ -3,10 +3,10 @@ import React from 'react'
 import { bioText, techs } from '../content/bio'
 import Technology from './Technology'
 
-const About = () => {
+const Bio = () => {
 
   return (
-    <section>
+    <section id="bio">
       <div className="subsection">
         <figure>
           <img src="../images/Fearchar-5.jpg" alt="Fearchar MacLean"/>
@@ -33,4 +33,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Bio
