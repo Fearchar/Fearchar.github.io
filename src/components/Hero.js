@@ -11,7 +11,7 @@ const Hero = ({ isHeroFull }) => {
   return (
     <div
       id="hero"
-      className={`hero banner ${isHeroFull && 'full'}`}
+      className={`hero banner ${isHeroFull ? 'full' : ''}`}
     >
       <h1 ref={h1Ref}>
         <SpanText text="Fearchar MacLean" />
