@@ -82,7 +82,6 @@ body {
       flex-flow: nowrap column;
       align-items: center;
       justify-content: center;
-      color: $light-font;
       height: 200px;
 
       @media(min-width: $width-tablet) {
@@ -91,12 +90,14 @@ body {
     }
 
     header {
+      color: $light-font;
 
       div:nth-child(1) {
         position: fixed;
         top: 0;
         z-index: 1;
         display: flex;
+        justify-content: flex-end;
         height: 0;
         padding: 0;
         width: 100%;
@@ -106,17 +107,57 @@ body {
         transition: height 0.5s;
         transition: padding 0.5s;
 
-
-        &.full {
+        &.active {
           height: auto;
           padding: $spacing-s;
           opacity: 1;
           transition: opacity 0.5s;
         }
 
+        &.open {
+          flex-direction: column;
+
+          a {
+            display: block;
+            width: 100%;
+            padding: $spacing-xs;
+            border-top: 1px solid $light-font;
+
+            &:last-child {
+              padding-bottom: 0;
+            }
+          }
+
+          i {
+            padding-bottom: $spacing-xs;
+          }
+        }
+
         a {
-          padding-right: $spacing-s;
-          font-size: $font-s;
+          display: none;
+        }
+
+        i {
+          align-self: flex-end;
+          display: block;
+        }
+
+        @media(min-width: $width-tablet) {
+          a {
+            display: block;
+            padding-right: $spacing-s;
+            font-size: $font-s;
+          }
+
+          i {
+            display: none;
+          }
+        }
+      }
+
+      @media(min-width: $width-tablet) {
+        div:nth-child(1) {
+          justify-content: flex-start;
         }
       }
 
