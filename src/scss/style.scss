@@ -83,6 +83,7 @@ body {
       align-items: center;
       justify-content: center;
       height: 200px;
+      color: $light-font;
 
       @media(min-width: $width-tablet) {
         height: 250px;
@@ -90,7 +91,6 @@ body {
     }
 
     header {
-      color: $light-font;
 
       div:nth-child(1) {
         position: fixed;
@@ -101,6 +101,7 @@ body {
         height: 0;
         padding: 0;
         width: 100%;
+        color: $light-font;
         background-color: $tertinary-colour;
         opacity: 0;
         transition: opacity 0.5s;
@@ -178,7 +179,7 @@ body {
           span {
             position: relative;
             top: 0;
-            transition: all 0.3s;
+            transition: top 0.3s;
 
             &.raise {
               top: -20px;
