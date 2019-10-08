@@ -1,4 +1,4 @@
-import React, { createRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 import Hero from './Hero'
 import About from './About'
@@ -7,11 +7,16 @@ import Expirience from './Expirience'
 
 const Page = () => {
   const [isHeroFull, setIsHeroFull] = useState(true)
-  const pageRef = createRef()
+  const [headingRefs, setHeadingRefs] = useState([])
+  const pageRef = useRef('pageRef')
 
   function manageFullHeight() {
     const atTop = pageRef.current.scrollTop <= 5 ? true : false
     setIsHeroFull(atTop)
+  }
+
+  function storeRef(ref) {
+    setHeadingRefs([...headingRefs, ref])
   }
 
   return (
@@ -25,7 +30,10 @@ const Page = () => {
       </header>
       <main>
         <About />
-        <Banner title="Expirience" />
+        <Banner
+          heading="Expirience"
+          storeRef={storeRef}
+        />
         <Expirience />
       </main>
     </div>
