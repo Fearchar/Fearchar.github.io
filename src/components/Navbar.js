@@ -15,7 +15,7 @@ const Navbar = ({ displayNav }) => {
       <a
         href="#hero"
         onClick={closeNav}
-      >Fearchar MacLean</a>
+      >Home</a>
       <a
         href="#bio"
         onClick={closeNav}

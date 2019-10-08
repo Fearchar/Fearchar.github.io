@@ -22,6 +22,7 @@ const Page = () => {
 
   return (
     <div
+      id="page-top"
       ref={pageRef}
       className="page"
       onScroll={manageFullHeight}
