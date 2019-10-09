@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react'
 
 import textWhipAnimation from '../lib/textWhipAnimation'
 import SpanText from './SpanText'
+import TabAnchor from './TabAnchor'
 
 const Hero = ({ isHeroFull }) => {
 
@@ -21,18 +22,18 @@ const Hero = ({ isHeroFull }) => {
       <p>with a passion for tabletop gaming,</p>
       <p>music and literature</p>
       <div>
-        <a href="https://github.com/Fearchar">
-          <i className="devicon-github-plain"></i>
+        <TabAnchor href="https://github.com/Fearchar">
+          <i className="devicon-github-plain" />
           <p>/fearchar</p>
-        </a>
-        <a href="https://www.linkedin.com/in/fearchar/">
-          <i className="fab fa-linkedin"></i>
+        </TabAnchor>
+        <TabAnchor href="https://www.linkedin.com/in/fearchar/">
+          <i className="fab fa-linkedin" />
           <p>/fearchar</p>
-        </a>
-        <a href="mailto: fearchar.maclean@gmail.com">
-          <i className="fas fa-envelope"></i>
+        </TabAnchor>
+        <TabAnchor href="mailto: fearchar.maclean@gmail.com">
+          <i className="fas fa-envelope" />
           <p>fearchar.maclean@gmail.com</p>
-        </a>
+        </TabAnchor>
       </div>
     </div>
   )

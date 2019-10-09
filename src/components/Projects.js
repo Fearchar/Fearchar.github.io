@@ -2,6 +2,7 @@ import React from 'react'
 
 import Technology from './Technology'
 import projects from '../content/projects'
+import TabAnchor from './TabAnchor'
 
 const Projects = () => {
   return (
@@ -9,7 +10,7 @@ const Projects = () => {
       {projects.map(project =>
         <div
           key={project.name}
-          className="map-container"
+          className="container"
         >
           <div className="section-two-thirds subsection">
             <img src={project.imageUrl}/>
@@ -17,10 +18,13 @@ const Projects = () => {
           <div className="section-third subsection">
             <h3>{project.name}</h3>
             <div>
-              <a>{project.gitLink}</a>
-              <a>{project.deployLink}</a>
+              <TabAnchor href={project.gitLink}>
+                <i className="devicon-github-plain" />
+              </TabAnchor>
+              <TabAnchor href={project.deployLink}>
+                <i className="fas fa-link" />
+              </TabAnchor>
             </div>
-            <h4>Tech Used</h4>
             <div className="techs">
               {project.techUsed.map(tech =>
                 <Technology

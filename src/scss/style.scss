@@ -1,29 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
 
 // Colour Variables
 $primary-colour: #272727;
 $secondary-colour: #4a6f9e;
 $tertinary-colour: #353535;
+$fourth-colour: #355884;
 $light-font: #fafafa;
 
 // Text
-$font-xxl: 100px;
-$font-xl: 80px;
-$font-l: 60px;
-$font-m: 40px;
-$font-ms: 30px;
+$font-xs: 15px;
 $font-s: 20px;
-$font-xs: 5px;
+$font-ms: 30px;
+$font-m: 40px;
+$font-ml: 50px;
+$font-l: 60px;
+$font-xl: 80px;
+$font-xxl: 100px;
 $font-colour-primary: black;
 
 // Structure
+$spacing-xxs: 2px;
 $spacing-xs: 10px;
 $spacing-s: 20px;
 $spacing-m: 40px;
 $spacing-l: 60px;
 $spacing-xl: 100px;
 $spacing-xxl: 150px;
-$section-height-m: 800px;
+$section-height-m: 700px;
 
 // Media Query
 $width-tablet: 650px;
@@ -43,9 +46,10 @@ body {
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
 
-    h1, h2, h3, h4, p, a, figure, {
+    h1, h2, h3, h4, h5, p, a, figure, {
       margin: 0;
       font-family: 'Ubuntu', sans-serif;
+      font-weight: normal;
     }
 
     h2:not(.hero) {
@@ -60,8 +64,17 @@ body {
       font-size: $font-l;
     }
 
+    h4 {
+      font-size: $font-m;
+    }
+
+    h5 {
+      font-size: $font-xs;
+    }
+
     p {
       font-size: $font-s;
+      letter-spacing: $spacing-xxs;
     }
 
     a {
@@ -71,6 +84,10 @@ body {
       &:hover {
         color: grey;
       }
+    }
+
+    strong {
+      font-weight: bold;
     }
 
     div.banner {
@@ -231,118 +248,154 @@ body {
 
     main {
 
-      section, section div.map-container {
-        display: flex;
-        flex-flow: wrap row;
-        align-items: center;
-        width: 100%;
+      section {
         padding: $spacing-m;
-        background-color: $secondary-colour;
 
-        @media(min-width: $width-tablet) {
-          padding: 0;
-        }
-
-        @media(min-width: $width-desktop) {
-          flex-flow: nowrap row;
-          height: $section-height-m;
-        }
-
-        img {
-          max-width: 100%;
-          max-height: 100%;
-          border: 10px solid $primary-colour;
-          border-radius: 3px;
-        }
-
-        div.subsection {
+        &, & div.container {
           display: flex;
-          flex-direction: column;
+          flex-flow: wrap row;
           align-items: center;
-          justify-content: center;
-          height: 100%;
           width: 100%;
-          padding-top: $spacing-s;
-          padding-bottom: $spacing-m;
-        }
-
-        div.section-third {
+          background-color: $secondary-colour;
 
           @media(min-width: $width-tablet) {
-            padding: $spacing-m;
-            width: 50%;
-
-            &:nth-child(3) {
-              width: 100%;
-            }
+            padding: 0;
           }
 
           @media(min-width: $width-desktop) {
-            height: 75%;
-
-            &, &:nth-child(3) {
-              width: (100% / 3);
-            }
+            flex-flow: nowrap row;
+            height: $section-height-m;
           }
 
-          h3 {
+          img {
+            max-width: 100%;
+            max-height: 100%;
+            border: 10px solid $primary-colour;
+            border-radius: 3px;
+          }
+
+          div.subsection {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100%;
+            width: 100%;
+            padding-top: $spacing-s;
             padding-bottom: $spacing-m;
           }
 
-          div.techs {
-            display: flex;
-            flex-flow: wrap row;
+          div.section-third {
 
-            div {
+            @media(min-width: $width-tablet) {
+              padding: $spacing-m;
+              width: 50%;
+
+              &:nth-child(3) {
+                width: 100%;
+              }
+            }
+
+            @media(min-width: $width-desktop) {
+              height: 75%;
+
+              &, &:nth-child(3) {
+                width: (100% / 3);
+              }
+            }
+
+            h3 {
+              padding-bottom: $spacing-m;
+            }
+
+            div.techs {
               display: flex;
-              flex-direction: column;
-              align-items: center;
-              width: 25%;
-              padding-bottom: $spacing-s;
+              flex-flow: wrap row;
 
-              i {
-                font-size: $font-l;
+              div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 25%;
+                padding-bottom: $spacing-s;
+
+                i {
+                  font-size: $font-l;
+                }
               }
             }
           }
-        }
 
-        div.section-two-thirds {
-          width: (190% / 3);
+          div.section-two-thirds {
 
-          @media(min-width: $width-tablet) {
-            width: 100%;
-            padding: $spacing-m;
-          }
+            @media(min-width: $width-tablet) {
+              width: 100%;
+              padding: $spacing-m;
+            }
 
-          @media(min-width: $width-desktop) {
-            width: (190% / 3);
-            padding: $spacing-m;
-          }
-
-          figure {
-            width: 100%;
-
-            img {
-              max-width: 100%;
-              max-height: 100%;
+            @media(min-width: $width-desktop) {
+              width: (200% / 3);
+              padding: $spacing-m;
             }
           }
         }
       }
 
-      section.carousel div {
+      section.carousel {
+        justify-content: center;
 
-        div.section-third {
-          width: 100%;
-
+        div.container {
           @media(min-width: $width-desktop) {
-            width: (100% / 3);
+            width: 95%;
+            height: 70%;
           }
 
-          div.techs {
-            i {
-              font-size: $font-s;
+          div.section-third {
+            justify-content: flex-start;
+            width: 100%;
+            height: 100%;
+
+            @media(min-width: $width-desktop) {
+              width: (100% / 3);
+            }
+
+            h3 {
+              font-size: $font-ml;
+              padding-bottom: $spacing-xxs;
+            }
+
+            h4 {
+              font-size: $font-ms;
+              padding-bottom: $spacing-s;
+            }
+
+            div:nth-child(2) {
+              display: flex;
+              justify-content: space-between;
+              width: 20%;
+              padding-bottom: $spacing-s;
+
+              a i {
+                font-size: $font-s;
+              }
+            }
+
+            div.techs {
+              width: 100%;
+              justify-content: space-between;
+
+              div {
+                width: 20%;
+
+                i {
+                  font-size: $font-ms;
+                }
+
+                h5 {
+                  font-size: $font-xs;
+                }
+              }
             }
           }
         }

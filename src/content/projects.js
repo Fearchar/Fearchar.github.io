@@ -1,4 +1,4 @@
-import techs from './techs'
+import { knownTechs } from './techContent'
 
 class Project {
   constructor(name, imageUrl, gitLink, deployLink, techUsed, desc) {
@@ -13,18 +13,17 @@ class Project {
 
 const projects = [
   new Project(
-    'Tetris: GA Project 1',
+    'Tetris',
     'https://i.imgur.com/D1uotOJ.jpg',
     'http://bit.ly/Gh-tetris',
     'http://bit.ly/Ghp-tetris',
     [
-      techs.find(tech => tech.name === 'JavaScript'),
-      techs.find(tech => tech.name === 'SCSS'),
-      techs.find(tech => tech.name === 'CSS3'),
-      techs.find(tech => tech.name === 'HTML5'),
-      techs.find(tech => tech.name === 'React')
+      knownTechs.find(tech => tech.name === 'JavaScript'),
+      knownTechs.find(tech => tech.name === 'SCSS'),
+      knownTechs.find(tech => tech.name === 'CSS3'),
+      knownTechs.find(tech => tech.name === 'HTML5')
     ],
-    'Tetris is a classic arcade puzzle game created by Alexey Leonidovich Pajitnov 1984, in which the player tessellates tiled blocks to score points, clear horizontal lines and stop the game board from overflowing with blocks.    My Tetris project is the first solo project that I have completed as part of a General Assembly Software Engineering Immersive course. It was built over the course of one week using a combination of JavaScript, HTML and CSS.'
+    'A week long solo project in which I built a website for playing the classic computer game Tetris, using vanilla JavaScript, HTML and SCSS.'
   )
 ]
 

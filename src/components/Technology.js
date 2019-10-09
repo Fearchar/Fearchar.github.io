@@ -3,8 +3,9 @@ import React from 'react'
 const Technology = ({ name, iconName }) => {
   return (
     <div>
-      <i className={`devicon-${iconName}`}></i>
-      <h4>{name}</h4>
+      {iconName && <i className={`devicon-${iconName}`} />}
+      {iconName && <h5>{name}</h5>}
+      {!iconName && <h5><strong>{name}</strong></h5>}
     </div>
   )
 }

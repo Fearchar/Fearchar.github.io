@@ -1,12 +1,13 @@
 class Tech {
-  constructor(name, iconName, confidence) {
+  constructor(name, iconName, priority, bioExclude=false) {
     this.name = name,
     this.iconName = iconName
-    this.confidence = confidence
+    this.priority = priority
+    this.bioExclude = bioExclude
   }
 }
 
-let techs = [
+let knownTechs = [
   new Tech('JavaScript', 'javascript-plain', 10),
   new Tech('React', 'react-original', 8),
   new Tech('MongoDB', 'mongodb-plain', 6),
@@ -25,6 +26,6 @@ let techs = [
   new Tech('Heroku', 'heroku-original', 5)
 ]
 
-techs = techs.sort((techA, techB) => techB.confidence - techA.confidence)
+knownTechs = knownTechs.sort((techA, techB) => techB.priority - techA.priority)
 
-export default techs
+export { Tech , knownTechs }
