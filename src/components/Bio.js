@@ -1,29 +1,28 @@
 import React from 'react'
 
-import { bioText, techs } from '../content/bio'
 import Technology from './Technology'
+import bioText from '../content/bio'
+import techs from '../content/techs'
 
 const Bio = () => {
 
   return (
     <section id="bio">
-      <div className="subsection">
-        <figure>
-          <img src="../images/Fearchar-5.jpg" alt="Fearchar MacLean"/>
-        </figure>
+      <div className="section-third subsection">
+        <img src="https://i.imgur.com/2siaQqK.jpg" alt="Fearchar MacLean"/>
       </div>
-      <div className="subsection">
+      <div className="section-third">
         <h3>My Bio</h3>
         <p>
           {bioText}
         </p>
       </div>
-      <div className="subsection">
+      <div className="section-third subsection">
         <h3>Tech</h3>
         <div className="techs">
-          {techs.map((tech, i) =>
+          {techs.map(tech =>
             <Technology
-              key={i}
+              key={tech.name}
               {...tech}
             />
           )}

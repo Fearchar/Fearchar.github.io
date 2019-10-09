@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Expirience = () => {
+const Experience = () => {
   return (
     <section>
 
@@ -8,4 +8,4 @@ const Expirience = () => {
   )
 }
 
-export default Expirience
+export default Experience

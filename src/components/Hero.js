@@ -12,6 +12,7 @@ const Hero = ({ isHeroFull }) => {
     <div
       id="hero"
       className={`hero banner ${isHeroFull ? 'full' : ''}`}
+      onClick={() => textWhipAnimation(h1Ref)}
     >
       <h1 ref={h1Ref}>
         <SpanText text="Fearchar MacLean" />

@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import Hero from './Hero'
 import Bio from './Bio'
 import Banner from './Banner'
-import Expirience from './Expirience'
+import Projects from './Projects'
 
 const Page = () => {
   const [isHeroFull, setIsHeroFull] = useState(true)
@@ -33,11 +33,11 @@ const Page = () => {
       <main>
         <Bio />
         <Banner
-          id="expirience"
-          heading="Expirience"
+          id="projects"
+          heading="Projects"
           storeRef={storeRef}
         />
-        <Expirience />
+        <Projects />
       </main>
     </div>
   )
