@@ -26,6 +26,10 @@ let knownTechs = [
   new Tech('Heroku', 'heroku-original', 5)
 ]
 
+const otherTechs = [
+  new Tech('Bulma', null, null)
+]
+
 knownTechs = knownTechs.sort((techA, techB) => techB.priority - techA.priority)
 
-export { Tech , knownTechs }
+export { Tech , knownTechs, otherTechs }

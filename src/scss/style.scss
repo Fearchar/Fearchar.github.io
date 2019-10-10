@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
 
 // Colour Variables
-$primary-colour: #272727;
-$secondary-colour: #4a6f9e;
-$tertinary-colour: #353535;
+$first-colour: #272727;
+$second-colour: #4a6f9e;
+$third-colour: #353535;
 $fourth-colour: #355884;
 $light-font: #fafafa;
 
@@ -16,7 +16,7 @@ $font-ml: 50px;
 $font-l: 60px;
 $font-xl: 80px;
 $font-xxl: 100px;
-$font-colour-primary: black;
+$font-colour-first: black;
 
 // Structure
 $spacing-xxs: 2px;
@@ -39,7 +39,7 @@ $width-desktop: 1000px;
 body {
   width: 100vw;
   margin: 0;
-  background-color: $primary-colour;
+  background-color: $first-colour;
 
   #root div.page {
     height: 100vh;
@@ -111,7 +111,7 @@ body {
         padding: 0;
         width: 100%;
         color: $light-font;
-        background-color: $tertinary-colour;
+        background-color: $third-colour;
         opacity: 0;
         transition: opacity 0.5s;
         transition: height 0.5s;
@@ -256,7 +256,7 @@ body {
           flex-flow: wrap row;
           align-items: center;
           width: 100%;
-          background-color: $secondary-colour;
+          background-color: $second-colour;
 
           @media(min-width: $width-tablet) {
             padding: 0;
@@ -267,10 +267,10 @@ body {
             height: $section-height-m;
           }
 
-          img {
+          img, a img {
             max-width: 100%;
             max-height: 100%;
-            border: 10px solid $primary-colour;
+            border: 10px solid $first-colour;
             border-radius: 3px;
           }
 
@@ -346,6 +346,12 @@ body {
         justify-content: center;
 
         div.container {
+          display: none;
+
+          &.active {
+            display: flex;
+          }
+
           @media(min-width: $width-desktop) {
             width: 95%;
             height: 70%;
@@ -362,7 +368,7 @@ body {
 
             h3 {
               font-size: $font-ml;
-              padding-bottom: $spacing-xxs;
+              padding-bottom: $spacing-xs;
             }
 
             h4 {

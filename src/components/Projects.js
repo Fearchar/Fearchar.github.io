@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Technology from './Technology'
 import projects from '../content/projects'
 import TabAnchor from './TabAnchor'
 
 const Projects = () => {
+  const [projectsIndex, setProjectsIndex] = useState(0)
+
   return (
     <section className="carousel">
-      {projects.map(project =>
+      {projects.map((project, i) =>
         <div
           key={project.name}
-          className="container"
+          className={`container ${i === projectsIndex ? 'active' : ''}`}
         >
+          <i
+            className="fas fa-chevron-left fa-5x"
+            onClick={() => projectsIndex && setProjectsIndex(projectsIndex - 1)}
+          />
           <div className="section-two-thirds subsection">
-            <img src={project.imageUrl}/>
+            <TabAnchor href={project.gitLink}>
+              <img src={project.imageUrl} />
+            </TabAnchor>
           </div>
           <div className="section-third subsection">
             <h3>{project.name}</h3>
@@ -35,6 +43,10 @@ const Projects = () => {
             </div>
             <p>{project.desc}</p>
           </div>
+          <i
+            className="fas fa-chevron-right fa-5x"
+            onClick={() => projectsIndex < projects.length - 1 && setProjectsIndex(projectsIndex + 1)}
+          />
         </div>
       )}
     </section>
