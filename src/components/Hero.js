@@ -35,6 +35,7 @@ const Hero = ({ isHeroFull }) => {
           <p>fearchar.maclean@gmail.com</p>
         </TabAnchor>
       </div>
+      {isHeroFull && <i className="fas fa-angle-down fa-3x" />}
     </div>
   )
 }
