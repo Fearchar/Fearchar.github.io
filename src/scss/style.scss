@@ -1,3 +1,8 @@
+/*!!! Consider reorganising how you put the @medias in:
+  - They should probably fit in directly after the initial properties are declared
+  - The element shouldn't be re announced, or have an &
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
 
 // Colour Variables
@@ -23,6 +28,7 @@ $font-colour-first: black;
 $spacing-xxs: 2px;
 $spacing-xs: 10px;
 $spacing-s: 20px;
+$spacing-ms: 30px;
 $spacing-m: 40px;
 $spacing-l: 60px;
 $spacing-xl: 100px;
@@ -52,7 +58,7 @@ body {
       font-family: 'Ubuntu', sans-serif;
       font-weight: normal;
     }
-
+// !!! Why does this need to be explicitly not hero?
     h2:not(.hero) {
       font-size: $font-l;
 
@@ -172,15 +178,20 @@ body {
         }
       }
 
-      .hero {
-        height: 300px;
-        margin-top: $spacing-l;
-        margin-bottom: $spacing-s;
+      div.hero {
+        height: 475px;
+        padding-top: $spacing-xxl;
+        padding-bottom: $spacing-ms;
         transition: all 0.5s;
 
         &.full {
           height: 100vh;
-          margin: 0;
+          padding-top: 0;
+          transition: all 0.5s;
+        }
+
+        h1, h2, p:nth-child(1n+4), a {
+          padding-bottom: $spacing-s;
         }
 
         h1 {
@@ -345,7 +356,7 @@ body {
             padding-left: $spacing-xxl;
             padding-right: $spacing-xxl;
 
-// clean up from here
+// !!! clean up from here
             > div {
               display: flex;
               display: flex;
