@@ -27,7 +27,7 @@ const projects = [
   ),
   new Project(
     'D&D Spellbook',
-    'https://i.imgur.com/6XoBXwW.png',
+    'https://i.imgur.com/F1g5yw4.png',
     'http://bit.ly/Ga-dnd-spellbook',
     'http://bit.ly/Ghp-dnd-spellbook',
     [
@@ -40,7 +40,7 @@ const projects = [
   ),
   new Project(
     'Happening',
-    'https://i.imgur.com/lw8ywdB.png',
+    'https://i.imgur.com/IokCYZP.png',
     'http://bit.ly/Gh-happening',
     'http://bit.ly/Ha-happening',
     [
@@ -53,7 +53,7 @@ const projects = [
   ),
   new Project(
     'Mana Curve',
-    'https://i.imgur.com/8vVmC55.png',
+    'https://i.imgur.com/kf38JKC.png',
     'http://bit.ly/Gh-mana-curve',
     'http://bit.ly/Ha-manacurve',
     [

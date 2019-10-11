@@ -16,7 +16,7 @@ const Carousel = ({ Template, slides, slideName }) => {
               className="fas fa-chevron-left fa-5x"
               onClick={() => currentSlide && setCurrentSlide(currentSlide - 1)}
             />
-            {<Template {...templateProp}/>}
+            <Template {...templateProp} />
             <i
               className="fas fa-chevron-right fa-5x"
               onClick={() => currentSlide < slides.length - 1 && setCurrentSlide(currentSlide + 1)}
