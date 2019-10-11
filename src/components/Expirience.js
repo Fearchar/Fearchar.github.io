@@ -8,11 +8,15 @@ const Expirience = ({ expirience }) => {
   return (
     <div>
       <div className="section-full subsection">
-        {breakUpText(expirience.name, (paragraph, i) =>
-          <h3 key={i}>{paragraph}</h3>
-        )}
-        <h3>{expirience.organisation}</h3>
-        <h5>{expirience.location} | {expirience.dates}</h5>
+        <div>
+          <div>
+            {breakUpText(expirience.name, (paragraph, i) =>
+              <h3 key={i}>{paragraph}</h3>
+            )}
+          </div>
+          <h4>{expirience.organisation}</h4>
+          <h5>{expirience.location} | {expirience.dates}</h5>
+        </div>
         {expirience.desc && breakUpText(expirience.desc, (paragraph, i) =>
           <p key={i}>{paragraph}</p>
         )}
