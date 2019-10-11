@@ -102,7 +102,7 @@ body {
 
     header {
 
-      div:nth-child(1) {
+      nav {
         position: fixed;
         top: 0;
         z-index: 1;
@@ -167,7 +167,7 @@ body {
       }
 
       @media(min-width: $width-tablet) {
-        div:nth-child(1) {
+        nav {
           justify-content: flex-start;
         }
       }
@@ -394,8 +394,16 @@ body {
             height: 70%;
           }
 
-          > i:hover {
-            color: $light-font;
+          > i {
+            opacity: 0;
+
+            &.active {
+              opacity: 1;
+            }
+
+            &:hover {
+              color: $light-font;
+            }
           }
 
           > div {

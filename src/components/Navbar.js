@@ -7,7 +7,7 @@ const Navbar = ({ displayNav }) => {
     setNavOpen(false)
   }
   return (
-    <div className={`${displayNav ? 'active' : ''} ${ navOpen ? 'open' : ''}`}>
+    <nav className={`${displayNav ? 'active' : ''} ${ navOpen ? 'open' : ''}`}>
       <i
         className="fas fa-bars"
         onClick={() => navOpen ? closeNav() : setNavOpen(true)}
@@ -32,7 +32,7 @@ const Navbar = ({ displayNav }) => {
         href="#interests"
         onClick={closeNav}
       >Interests</a>
-    </div>
+    </nav>
   )
 }
 

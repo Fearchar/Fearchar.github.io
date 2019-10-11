@@ -13,12 +13,12 @@ const Carousel = ({ Template, slides, slideName }) => {
             className={`container ${i === currentSlide ? 'active' : ''}`}
           >
             <i
-              className="fas fa-chevron-left fa-5x"
+              className={`fas fa-chevron-left fa-5x ${i ? 'active' : ''}`}
               onClick={() => currentSlide && setCurrentSlide(currentSlide - 1)}
             />
             <Template {...templateProp} />
             <i
-              className="fas fa-chevron-right fa-5x"
+              className={`fas fa-chevron-right fa-5x ${i < slides.length - 1 ? 'active' : ''}`}
               onClick={() => currentSlide < slides.length - 1 && setCurrentSlide(currentSlide + 1)}
             />
           </ div>
