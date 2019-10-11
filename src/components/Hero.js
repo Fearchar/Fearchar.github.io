@@ -4,18 +4,20 @@ import textWhipAnimation from '../lib/textWhipAnimation'
 import SpanText from './SpanText'
 import TabAnchor from './TabAnchor'
 
-const Hero = ({ isHeroFull }) => {
+const Hero = ({ isHeroFull, pageNode }) => {
 
   const h1Ref = useRef(null)
-  useEffect(() => textWhipAnimation(h1Ref), [h1Ref])
+  useEffect(() => textWhipAnimation(h1Ref), [isHeroFull])
 
   return (
     <div
       id="hero"
       className={`hero banner ${isHeroFull ? 'full' : ''}`}
-      onClick={() => textWhipAnimation(h1Ref)}
     >
-      <h1 ref={h1Ref}>
+      <h1
+        ref={h1Ref}
+        onClick={() => textWhipAnimation(h1Ref)}
+      >
         <SpanText text="Fearchar MacLean" />
       </h1>
       <h2>Full Stack Developer</h2>
@@ -35,7 +37,12 @@ const Hero = ({ isHeroFull }) => {
           <p>fearchar.maclean@gmail.com</p>
         </TabAnchor>
       </div>
-      {isHeroFull && <i className="fas fa-angle-down fa-3x" />}
+      {isHeroFull &&
+        <i
+          className="fas fa-angle-down fa-2x"
+          onClick={() => pageNode.scroll(0, 30)}
+        />
+      }
     </div>
   )
 }

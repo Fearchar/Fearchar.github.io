@@ -32,7 +32,10 @@ const Page = () => {
     >
       <header>
         <Navbar displayNav={!isHeroFull}/>
-        <Hero isHeroFull={isHeroFull}/>
+        <Hero
+          isHeroFull={isHeroFull}
+          pageNode={pageRef.current}
+        />
       </header>
       <main>
         <Bio />
