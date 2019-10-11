@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Expirience = ({ expirience }) => {
-  function breakUpText(text, callback) {
+  function dynamicMultiline(text, callback) {
     return text.split('\n').map(callback)
   }
 
@@ -10,14 +10,14 @@ const Expirience = ({ expirience }) => {
       <div className="section-full subsection">
         <div>
           <div>
-            {breakUpText(expirience.name, (paragraph, i) =>
+            {dynamicMultiline(expirience.name, (paragraph, i) =>
               <h3 key={i}>{paragraph}</h3>
             )}
           </div>
           <h4>{expirience.organisation}</h4>
           <h5>{expirience.location} | {expirience.dates}</h5>
         </div>
-        {expirience.desc && breakUpText(expirience.desc, (paragraph, i) =>
+        {expirience.desc && dynamicMultiline(expirience.desc, (paragraph, i) =>
           <p key={i}>{paragraph}</p>
         )}
         {expirience.bullets &&

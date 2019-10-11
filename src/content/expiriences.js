@@ -12,7 +12,7 @@ class Expirience {
 const expiriences = [
   new Expirience(
     'Software Engineering Immersive',
-    'Generl Assembly',
+    'General Assembly',
     'London',
     'June 2019 - September 2019',
     'I have really enjoyed my time at GA, and having the opportunity to focus entirely on programming in an intensive environment. I had been casually for a couple of years, but the opportunity to be on campus every day, work through problems and learn best practices has been deeply fulfilling. Intensive projects, which form a fundamental part of the GA experience, have reinforced the work done in the classroom, improved the way I explain and discuss code and changed my approach to problem solving.\nI’m excited to be taking these first steps in to what will hopefully be a long and fruitful career and I’m looking forward to joining an industry which offers continued opportunities for training and development.'
