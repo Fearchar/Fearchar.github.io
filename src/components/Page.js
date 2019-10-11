@@ -9,15 +9,23 @@ import Project from './Project'
 import Expirience from './Expirience'
 import projects from '../content/projects'
 import expiriences from '../content/expiriences'
+import textWhipAnimation from '../lib/textWhipAnimation'
 
 const Page = () => {
   const [isHeroFull, setIsHeroFull] = useState(true)
   const [headingRefs, setHeadingRefs] = useState([])
   const pageRef = useRef(null)
 
-  function manageFullHeight() {
-    const atTop = pageRef.current.scrollTop <= 5 ? true : false
+  function manageFullHeight(refs) {
+    const pageNode = pageRef.current
+    const atTop = pageNode.scrollTop <= 5 ? true : false
     setIsHeroFull(atTop)
+    refs.forEach(ref => {
+      const node = ref.current
+      if (pageRef.scrollTop === node.getBoundingClientRect().y) {
+        textWhipAnimation(node)
+      }
+    })
   }
 
   function storeRef(ref) {
@@ -28,7 +36,7 @@ const Page = () => {
     <div
       ref={pageRef}
       className="page"
-      onScroll={manageFullHeight}
+      onScroll={() => manageFullHeight(headingRefs)}
     >
       <header>
         <Navbar displayNav={!isHeroFull}/>

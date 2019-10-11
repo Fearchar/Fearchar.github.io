@@ -1,5 +1,5 @@
-function textWhipAnimation(ref, repetitions=2) {
-  const charSpans = ref.current.children
+function textWhipAnimation(node, repetitions=2) {
+  const charSpans = node.children
   for (let i = 0; i < repetitions * charSpans.length * 2; i++) {
     setTimeout(() => {
       const charSpan = charSpans[i % charSpans.length]

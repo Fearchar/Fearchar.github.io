@@ -1,5 +1,5 @@
-function newLineNodes(text, elmCallback) {
-  return text.split('\n').map(elmCallback)
+function newLineNodes(text, nodeCallback) {
+  return text.split('\n').map(nodeCallback)
 }
 
 export default newLineNodes

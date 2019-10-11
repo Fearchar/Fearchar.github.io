@@ -7,7 +7,7 @@ import TabAnchor from './TabAnchor'
 const Hero = ({ isHeroFull, pageNode }) => {
 
   const h1Ref = useRef(null)
-  useEffect(() => textWhipAnimation(h1Ref), [isHeroFull])
+  useEffect(() => textWhipAnimation(h1Ref.current), [isHeroFull])
 
   return (
     <div
@@ -16,7 +16,7 @@ const Hero = ({ isHeroFull, pageNode }) => {
     >
       <h1
         ref={h1Ref}
-        onClick={() => textWhipAnimation(h1Ref)}
+        onClick={() => textWhipAnimation(h1Ref.current)}
       >
         <SpanText text="Fearchar MacLean" />
       </h1>
