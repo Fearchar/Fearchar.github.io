@@ -340,6 +340,12 @@ body {
               padding: $spacing-m;
             }
           }
+
+          div.section-full {
+            justify-content: space-between;
+            padding-left: $spacing-xxl;
+            padding-right: $spacing-xxl;
+          }
         }
       }
 
@@ -362,8 +368,9 @@ body {
             color: $light-font;
           }
 
-          div {
+          > div {
             display: flex;
+            height: 100%;
 
             div.section-third {
               justify-content: flex-start;

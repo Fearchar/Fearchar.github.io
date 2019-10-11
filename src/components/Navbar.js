@@ -21,7 +21,7 @@ const Navbar = ({ displayNav }) => {
         onClick={closeNav}
       >Bio</a>
       <a
-        href="#experience"
+        href="#expirience"
         onClick={closeNav}
       >Expirience</a>
       <a

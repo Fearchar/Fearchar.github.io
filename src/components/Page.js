@@ -6,7 +6,9 @@ import Bio from './Bio'
 import Banner from './Banner'
 import Carousel from './Carousel'
 import Project from './Project'
+import Expirience from './Expirience'
 import projects from '../content/projects'
+import expiriences from '../content/expiriences'
 
 const Page = () => {
   const [isHeroFull, setIsHeroFull] = useState(true)
@@ -34,6 +36,12 @@ const Page = () => {
       </header>
       <main>
         <Bio />
+        <Banner
+          id="expirience"
+          heading="Expirience"
+          storeRef={storeRef}
+        />
+        <Carousel Template={Expirience} slides={expiriences} slideName="expirience" />
         <Banner
           id="projects"
           heading="Projects"
