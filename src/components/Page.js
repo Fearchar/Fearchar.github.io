@@ -13,7 +13,9 @@ import textWhipAnimation from '../lib/textWhipAnimation'
 
 const Page = () => {
   const [isHeroFull, setIsHeroFull] = useState(true)
-  const [headings, setHeadings] = useState([/*{ ref: nodeRef, beenBelowView: bool, aboveMidPoint: bool }*/])
+  const [headings, setHeadings] = useState([
+    /*{ref: nodeRef, beenBelowView: bool, aboveMidPoint: bool}*/
+  ])
   const pageRef = useRef(null)
 
   function manageHeroHeight(pageNode) {
@@ -21,7 +23,7 @@ const Page = () => {
     setIsHeroFull(atTop)
   }
 
-  function manageHeadingAnimation(headings) {
+  function manageHeadingAnimations(headings) {
     const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
     const midPoint = viewHeight / 2
     headings.forEach(heading => {
@@ -47,7 +49,7 @@ const Page = () => {
       className="page"
       onScroll={() => {
         manageHeroHeight(pageRef.current)
-        manageHeadingAnimation(headings, pageRef.current)
+        manageHeadingAnimations(headings)
       }}
     >
       <header>
