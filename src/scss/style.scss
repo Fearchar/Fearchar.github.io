@@ -200,15 +200,25 @@ body {
           transition: all 0.5s;
         }
 
-        h1, h2, p:nth-child(1n+4), a {
+        h1, a {
           padding-bottom: $spacing-s;
         }
 
+        h2, p:nth-child(3){
+          padding-bottom: $spacing-xs;
+        }
+
+        p:nth-child(4) {
+          padding-bottom: $spacing-ms;
+        }
+
         h1 {
-          font-size: $font-m;
+          font-size: $font-ms;
+          font-weight: bold;
 
           @media(min-width: $width-tablet) {
             font-size: $font-xl;
+            font-weight: normal;
           }
 
           @media(min-width: $width-desktop) {
@@ -217,7 +227,7 @@ body {
         }
 
         h2 {
-          font-size: $font-ms;
+          font-size: $font-s;
 
           @media(min-width: $width-tablet) {
             font-size: $font-m;
@@ -225,6 +235,14 @@ body {
 
           @media(min-width: $width-desktop) {
             font-size: $font-l;
+          }
+        }
+
+        p, > div p {
+          font-size: $font-xxs;
+
+          @media(min-width: $width-tablet) {
+            font-size: $font-s;
           }
         }
 
@@ -348,7 +366,6 @@ body {
 
             @media(min-width: $width-desktop) {
               width: (200% / 3);
-              padding: $spacing-m;
             }
           }
 

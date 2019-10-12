@@ -20,7 +20,7 @@ const Hero = ({ isHeroFull, pageNode }) => {
       >
         <SpanText text="Fearchar MacLean" />
       </h1>
-      <h2>Full Stack Developer</h2>
+      <h2>A Full Stack Developer</h2>
       <p>with a passion for tabletop gaming,</p>
       <p>music and literature</p>
       <div>

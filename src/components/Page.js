@@ -66,13 +66,21 @@ const Page = () => {
           heading="Expirience"
           storeRef={storeRef}
         />
-        <Carousel Template={Expirience} slides={expiriences} slideName="expirience" />
+        <Carousel
+          Template={Expirience}
+          slides={expiriences}
+          slideName="expirience"
+        />
         <Banner
           id="projects"
           heading="Projects"
           storeRef={storeRef}
         />
-        <Carousel Template={Project} slides={projects} slideName="project" />
+        <Carousel
+          Template={Project}
+          slides={projects}
+          slideName="project"
+        />
       </main>
     </div>
   )
