@@ -5,7 +5,7 @@ function textWhipAnimation(node, repetitions=2) {
       const charSpan = charSpans[i % charSpans.length]
       if (!charSpan.classList.contains('raise')) charSpan.classList.add('raise')
       else (charSpan.classList.remove('raise'))
-    }, 20 * i)
+    }, (320 * i) / charSpans.length)
   }
 }
 

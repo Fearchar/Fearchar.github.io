@@ -104,6 +104,16 @@ body {
       justify-content: center;
       height: $spacing-xxl;
       color: $light-font;
+
+      span {
+        position: relative;
+        top: 0;
+        transition: top 0.3s;
+
+        &.raise {
+          top: -20px;
+        }
+      }
     }
 
     header {
@@ -196,16 +206,6 @@ body {
 
         h1 {
           font-size: $font-m;
-
-          span {
-            position: relative;
-            top: 0;
-            transition: top 0.3s;
-
-            &.raise {
-              top: -20px;
-            }
-          }
 
           @media(min-width: $width-tablet) {
             font-size: $font-xl;

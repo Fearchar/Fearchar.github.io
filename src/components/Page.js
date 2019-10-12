@@ -13,30 +13,42 @@ import textWhipAnimation from '../lib/textWhipAnimation'
 
 const Page = () => {
   const [isHeroFull, setIsHeroFull] = useState(true)
-  const [headingRefs, setHeadingRefs] = useState([])
+  const [headings, setHeadings] = useState([/*{ ref: nodeRef, beenBelowView: bool, aboveMidPoint: bool }*/])
   const pageRef = useRef(null)
 
-  function manageFullHeight(refs) {
-    const pageNode = pageRef.current
+  function manageHeroHeight(pageNode) {
     const atTop = pageNode.scrollTop <= 5 ? true : false
     setIsHeroFull(atTop)
-    refs.forEach(ref => {
-      const node = ref.current
-      if (pageRef.scrollTop === node.getBoundingClientRect().y) {
+  }
+
+  function manageHeadingAnimation(headings) {
+    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+    const midPoint = viewHeight / 2
+    headings.forEach(heading => {
+      const node = heading.ref.current
+      const { top } = node.getBoundingClientRect()
+      heading.beenBelowView = heading.beenBelowView || top > viewHeight
+      const aboveMidPoint = top < midPoint
+      if (heading.beenBelowView && aboveMidPoint && !heading.aboveMidPoint) {
         textWhipAnimation(node)
+        heading.beenBelowView = false
       }
+      heading.aboveMidPoint = aboveMidPoint
     })
   }
 
   function storeRef(ref) {
-    setHeadingRefs([...headingRefs, ref])
+    setHeadings(headings => [...headings, { ref: ref, aboveMidPoint: null }])
   }
 
   return (
     <div
       ref={pageRef}
       className="page"
-      onScroll={() => manageFullHeight(headingRefs)}
+      onScroll={() => {
+        manageHeroHeight(pageRef.current)
+        manageHeadingAnimation(headings, pageRef.current)
+      }}
     >
       <header>
         <Navbar displayNav={!isHeroFull}/>
