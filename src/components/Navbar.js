@@ -28,10 +28,6 @@ const Navbar = ({ displayNav }) => {
         href="#projects"
         onClick={closeNav}
       >Projects</a>
-      <a
-        href="#interests"
-        onClick={closeNav}
-      >Interests</a>
     </nav>
   )
 }

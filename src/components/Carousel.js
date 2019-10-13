@@ -21,6 +21,7 @@ const Carousel = ({ Template, slides, slideName }) => {
               className={`fas fa-chevron-right fa-5x ${i < slides.length - 1 ? 'active' : ''}`}
               onClick={() => currentSlide < slides.length - 1 && setCurrentSlide(currentSlide + 1)}
             />
+            {i !== slides.length - 1 && <hr />}
           </ div>
         )
       })}

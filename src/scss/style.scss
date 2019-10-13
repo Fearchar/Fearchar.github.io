@@ -42,6 +42,12 @@ $section-height-m: 700px;
 $width-tablet: 650px;
 $width-desktop: 1000px;
 
+@mixin user-select-none {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -98,6 +104,11 @@ body {
 
     strong {
       font-weight: bold;
+    }
+
+    hr {
+      color: black;
+      border-color: black;
     }
 
     div.banner {
@@ -292,12 +303,14 @@ body {
           background-color: $second-colour;
 
           @media(min-width: $width-tablet) {
+            min-height: $section-height-m;
             padding: 0;
           }
 
           @media(min-width: $width-desktop) {
             flex-flow: nowrap row;
             height: $section-height-m;
+            min-height: inherit;
           }
 
           a {
@@ -381,23 +394,49 @@ body {
           }
 
           div.section-full {
-            padding-left: $spacing-xxl;
-            padding-right: $spacing-xxl;
+            padding-bottom: 0;
 
-// !!! clean up from here
+            @media(min-width: $width-tablet) {
+              padding-left: $spacing-l;
+              padding-right: $spacing-l;
+            }
+
+            @media(min-width: $width-desktop) {
+              padding-left: $spacing-xl;
+              padding-right: $spacing-xl;
+            }
+
             > div, > div div {
               display: flex;
               flex-direction: column;
               align-items: center;
-              padding-bottom: $spacing-m;
-// to here
+              padding-bottom: $spacing-s;
+
+              @media(min-width: $width-tablet) {
+                padding-bottom: $spacing-m;
+              }
+
               h3 {
                 padding-bottom: 0;
-              }
-            }
+                text-align: center;
+                font-size: $font-m;
+                font-weight: bold;
 
-            h4 {
-              padding-bottom: $spacing-xs;
+                @media(min-width: $width-tablet) {
+                  font-size: $font-l;
+                  font-weight: normal;
+                }
+              }
+
+              h4 {
+                padding-bottom: $spacing-s;
+                text-align: center;
+                font-size: $font-ms;
+
+                @media(min-width: $width-tablet) {
+                  font-size: $font-m;
+                }
+              }
             }
 
             p {
@@ -415,10 +454,10 @@ body {
         justify-content: center;
 
         div.container {
-          display: none;
+          display: flex;
 
-          &.active {
-            display: flex;
+          @media(min-width: $width-tablet) {
+            display: none;
           }
 
           @media(min-width: $width-desktop) {
@@ -426,20 +465,39 @@ body {
             height: 70%;
           }
 
+          &.active {
+            display: flex;
+          }
+
           > i {
-            opacity: 0;
+            display: none;
+            @include user-select-none;
 
-            &.active {
-              opacity: 1;
+            @media(min-width: $width-tablet) {
+              display: block;
+              opacity: 0;
+
+              &.active {
+                opacity: 1;
+              }
+
+              &:hover {
+                color: $light-font;
+              }
             }
+          }
 
-            &:hover {
-              color: $light-font;
+          hr {
+            width: 100%;
+
+            @media(min-width: $width-tablet) {
+              display: none;
             }
           }
 
           > div {
             display: flex;
+            width: 87%;
             height: 100%;
 
             div.section-third {
