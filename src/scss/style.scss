@@ -395,8 +395,8 @@ body {
             padding-bottom: 0;
 
             @media(min-width: $width-tablet) {
-              padding-left: $spacing-l;
-              padding-right: $spacing-l;
+              padding-left: $spacing-m;
+              padding-right: $spacing-m;
             }
 
             @media(min-width: $width-desktop) {
@@ -453,6 +453,7 @@ body {
 
         div.container {
           display: flex;
+          justify-content: center;
 
           @media(min-width: $width-tablet) {
             display: none;
@@ -469,7 +470,7 @@ body {
 
           > i {
             display: none;
-            // font-size: $font-s;
+            font-size: $font-m;
             @include user-select-none;
 
             @media(min-width: $width-tablet) {
@@ -496,6 +497,7 @@ body {
 
           > div {
             display: flex;
+            flex-wrap: wrap;
             width: 100%;
             height: 100%;
 
