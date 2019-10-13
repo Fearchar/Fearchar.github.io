@@ -2,6 +2,9 @@
   - They should probably fit in directly after the initial properties are declared
   - The element shouldn't be re announced, or have an &
 */
+/*!!!
+  - Consider using mixins for repeated collection of properties
+*/
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
 
@@ -281,7 +284,7 @@ body {
       section {
         padding: $spacing-m;
 
-        &, & div.container {
+        &, div.container {
           display: flex;
           flex-flow: wrap row;
           align-items: center;
@@ -297,11 +300,19 @@ body {
             height: $section-height-m;
           }
 
-          img, a img {
-            max-width: 100%;
-            max-height: 100%;
-            border: 10px solid $first-colour;
-            border-radius: 3px;
+          a {
+            height: 100%;
+
+            img {
+              border: 10px solid $first-colour;
+              border-radius: 3px;
+              width: 100%;
+
+              @media(min-width: $width-desktop) {
+                width: auto;
+                height: 100%;
+              }
+            }
           }
 
           div.subsection {
@@ -374,24 +385,17 @@ body {
             padding-right: $spacing-xxl;
 
 // !!! clean up from here
-            > div {
-              display: flex;
+            > div, > div div {
               display: flex;
               flex-direction: column;
               align-items: center;
               padding-bottom: $spacing-m;
-
-              div {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding-bottom: $spacing-s;
 // to here
-                h3 {
-                  padding-bottom: 0;
-                }
+              h3 {
+                padding-bottom: 0;
               }
             }
+
             h4 {
               padding-bottom: $spacing-xs;
             }
