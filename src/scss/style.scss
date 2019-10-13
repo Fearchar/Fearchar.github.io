@@ -293,25 +293,27 @@ body {
     main {
 
       section {
+        display: flex;
+        flex-flow: wrap column;
+        align-items: center;
+        justify-content: center;
         padding: $spacing-m;
+        background-color: $second-colour;
 
-        &, div.container {
+        @media(min-width: $width-tablet) {
+          min-height: $section-height-m;
+          padding: 0;
+        }
+
+        @media(min-width: $width-desktop) {
+          flex-flow: nowrap row;
+        }
+
+        div.container {
           display: flex;
           flex-flow: wrap row;
           align-items: center;
           width: 100%;
-          background-color: $second-colour;
-
-          @media(min-width: $width-tablet) {
-            min-height: $section-height-m;
-            padding: 0;
-          }
-
-          @media(min-width: $width-desktop) {
-            flex-flow: nowrap row;
-            height: $section-height-m;
-            min-height: inherit;
-          }
 
           a {
             height: 100%;
@@ -320,11 +322,6 @@ body {
               border: 10px solid $first-colour;
               border-radius: 3px;
               width: 100%;
-
-              @media(min-width: $width-desktop) {
-                width: auto;
-                height: 100%;
-              }
             }
           }
 
@@ -344,6 +341,7 @@ body {
             @media(min-width: $width-tablet) {
               padding: $spacing-m;
               width: 50%;
+              align-self: flex-start;
 
               &:nth-child(3) {
                 width: 100%;
@@ -471,6 +469,7 @@ body {
 
           > i {
             display: none;
+            // font-size: $font-s;
             @include user-select-none;
 
             @media(min-width: $width-tablet) {
@@ -497,8 +496,12 @@ body {
 
           > div {
             display: flex;
-            width: 87%;
+            width: 100%;
             height: 100%;
+
+            @media(min-width: $width-tablet) {
+              width: 87%;
+            }
 
             div.section-third {
               justify-content: flex-start;
