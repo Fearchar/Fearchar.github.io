@@ -1,9 +1,9 @@
 import React from 'react'
 
-import TabAnchor from './TabAnchor'
-import Technology from './Technology'
-import bioText from '../content/bioText'
-import { knownTechs } from '../content/techContent'
+import TabAnchor from '../lib/TabAnchor'
+import Technology from '../lib/Technology'
+import bioText from '../../content/bioText'
+import { knownTechs } from '../../content/techContent'
 
 const Bio = () => {
 // !!! Add FM image to content folder

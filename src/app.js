@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './scss/style.scss'
 
-import Page from './components/Page'
+import Page from './components/page/Page'
 
 class App extends React.Component {
   constructor() {

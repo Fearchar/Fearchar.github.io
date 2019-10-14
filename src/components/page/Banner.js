@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 
-import SpanText from './SpanText'
+import SpanText from '../lib/SpanText'
 
 const Banner = ({ id, heading, storeRef }) => {
   const h2Ref = useRef(null)

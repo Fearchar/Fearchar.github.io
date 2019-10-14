@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Technology from './Technology'
-import TabAnchor from './TabAnchor'
+import Technology from '../lib/Technology'
+import TabAnchor from '../lib/TabAnchor'
 
-const Project = ({ project }) => {
+const ProjectTemplate = ({ project }) => {
   return (
     <div>
       <div className="section-two-thirds subsection">
@@ -35,4 +35,4 @@ const Project = ({ project }) => {
   )
 }
 
-export default Project
+export default ProjectTemplate

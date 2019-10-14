@@ -1,8 +1,8 @@
 import React from 'react'
 
-import newLineNodes from '../lib/newLineNodes'
+import newLineNodes from '../../lib/newLineNodes'
 
-const Experience = ({ Experience }) => {
+const ExperienceTemplate = ({ Experience }) => {
   return (
     <div>
       <div className="section-full subsection">
@@ -30,4 +30,4 @@ const Experience = ({ Experience }) => {
   )
 }
 
-export default Experience
+export default ExperienceTemplate

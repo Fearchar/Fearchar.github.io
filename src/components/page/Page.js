@@ -5,11 +5,11 @@ import Hero from './Hero'
 import Bio from './Bio'
 import Banner from './Banner'
 import Carousel from './Carousel'
-import Project from './Project'
-import Experience from './Experience'
-import projects from '../content/projects'
-import Experiences from '../content/experiences'
-import textWhipAnimation from '../lib/textWhipAnimation'
+import ProjectTemplate from './ProjectTemplate'
+import ExperienceTemplate from './ExperienceTemplate'
+import projects from '../../content/projects'
+import experiences from '../../content/experiences'
+import textWhipAnimation from '../../lib/textWhipAnimation'
 
 const Page = () => {
   const [isHeroFull, setIsHeroFull] = useState(true)
@@ -67,8 +67,8 @@ const Page = () => {
           storeRef={storeRef}
         />
         <Carousel
-          Template={Experience}
-          slides={Experiences}
+          Template={ExperienceTemplate}
+          slides={experiences}
           slideName="Experience"
         />
         <Banner
@@ -77,7 +77,7 @@ const Page = () => {
           storeRef={storeRef}
         />
         <Carousel
-          Template={Project}
+          Template={ProjectTemplate}
           slides={projects}
           slideName="project"
         />
