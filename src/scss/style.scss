@@ -13,7 +13,8 @@ $first-colour: #272727;
 $second-colour: #4a6f9e;
 $third-colour: #353535;
 $fourth-colour: #355884;
-$light-font: #fafafa;
+$font-colour-first: black;
+$font-colour-second: #fafafa;
 
 // Text
 $font-xxs: 15px;
@@ -25,7 +26,6 @@ $font-ml: 50px;
 $font-l: 60px;
 $font-xl: 80px;
 $font-xxl: 100px;
-$font-colour-first: black;
 
 // Structure
 $spacing-xxs: 2px;
@@ -67,6 +67,7 @@ body {
       font-family: 'Ubuntu', sans-serif;
       font-weight: normal;
     }
+
 // !!! Why does this need to be explicitly not hero?
     h2:not(.hero) {
       font-size: $font-l;
@@ -117,7 +118,7 @@ body {
       align-items: center;
       justify-content: center;
       height: $spacing-xxl;
-      color: $light-font;
+      color: $font-colour-second;
 
       span {
         position: relative;
@@ -141,7 +142,7 @@ body {
         height: 0;
         padding: 0;
         width: 100%;
-        color: $light-font;
+        color: $font-colour-second;
         background-color: $third-colour;
         opacity: 0;
         transition: opacity 0.5s;
@@ -162,7 +163,7 @@ body {
             display: block;
             width: 100%;
             padding: $spacing-xs;
-            border-top: 1px solid $light-font;
+            border-top: 1px solid $font-colour-second;
 
             &:last-child {
               padding-bottom: 0;
@@ -314,6 +315,10 @@ body {
           flex-flow: wrap row;
           align-items: center;
           width: 100%;
+
+          a:hover {
+            color: $font-colour-second;
+          }
 
           a {
             height: 100%;
@@ -488,7 +493,7 @@ body {
               }
 
               &:hover {
-                color: $light-font;
+                color: $font-colour-second;
               }
             }
           }
@@ -526,6 +531,11 @@ body {
                 font-size: $font-ml;
                 padding-bottom: $spacing-xs;
                 text-align: center;
+                font-weight: bold;
+
+                @media(min-width: $width-tablet) {
+                  font-weight: normal;
+                }
               }
 
               h4 {
