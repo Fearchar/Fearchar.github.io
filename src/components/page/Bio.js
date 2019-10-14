@@ -12,7 +12,7 @@ const Bio = () => {
       <div className="container">
         <div className="section-third subsection">
           <TabAnchor href="https://github.com/fearchar">
-            <img src="https://i.imgur.com/2siaQqK.jpg" alt="Fearchar MacLean"/>
+            <img src="https://i.imgur.com/0iXKfYh.png" alt="Fearchar MacLean"/>
           </TabAnchor>
         </div>
         <div className="section-third subsection">
