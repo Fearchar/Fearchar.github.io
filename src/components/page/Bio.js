@@ -2,8 +2,8 @@ import React from 'react'
 
 import TabAnchor from '../lib/TabAnchor'
 import Technology from '../lib/Technology'
-import bioText from '../../content/bioText'
-import { knownTechs } from '../../content/techContent'
+import { bioImage, bioText } from '../../content/bio'
+import { knownTechs } from '../../content/tech'
 
 const Bio = () => {
 // !!! Add FM image to content folder
@@ -12,7 +12,7 @@ const Bio = () => {
       <div className="container">
         <div className="section-third subsection">
           <TabAnchor href="https://github.com/fearchar">
-            <img src="https://i.imgur.com/0iXKfYh.png" alt="Fearchar MacLean"/>
+            <img src={bioImage} alt="Fearchar MacLean"/>
           </TabAnchor>
         </div>
         <div className="section-third subsection">

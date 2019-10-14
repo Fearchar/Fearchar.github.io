@@ -1,4 +1,4 @@
-import { knownTechs, otherTechs } from './techContent'
+import { knownTechs, otherTechs } from './tech'
 
 class Project {
   constructor(name, imageUrl, gitLink, deployLink, techUsed, desc) {
