@@ -2,25 +2,25 @@ import React from 'react'
 
 import newLineNodes from '../lib/newLineNodes'
 
-const Expirience = ({ expirience }) => {
+const Experience = ({ Experience }) => {
   return (
     <div>
       <div className="section-full subsection">
         <div>
           <div>
-            {newLineNodes(expirience.name, (paragraph, i) =>
+            {newLineNodes(Experience.name, (paragraph, i) =>
               <h3 key={i}>{paragraph}</h3>
             )}
           </div>
-          <h4>{expirience.organisation}</h4>
-          <h5>{expirience.location} | {expirience.dates}</h5>
+          <h4>{Experience.organisation}</h4>
+          <h5>{Experience.location} | {Experience.dates}</h5>
         </div>
-        {expirience.desc && newLineNodes(expirience.desc, (paragraph, i) =>
+        {Experience.desc && newLineNodes(Experience.desc, (paragraph, i) =>
           <p key={i}>{paragraph}</p>
         )}
-        {expirience.bullets &&
+        {Experience.bullets &&
           <ul>
-            {expirience.bullets.map((bullet, i) =>
+            {Experience.bullets.map((bullet, i) =>
               <li key={i}><p>{bullet}</p></li>
             )}
           </ul>
@@ -30,4 +30,4 @@ const Expirience = ({ expirience }) => {
   )
 }
 
-export default Expirience
+export default Experience

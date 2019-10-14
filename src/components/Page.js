@@ -6,9 +6,9 @@ import Bio from './Bio'
 import Banner from './Banner'
 import Carousel from './Carousel'
 import Project from './Project'
-import Expirience from './Expirience'
+import Experience from './Experience'
 import projects from '../content/projects'
-import expiriences from '../content/expiriences'
+import Experiences from '../content/experiences'
 import textWhipAnimation from '../lib/textWhipAnimation'
 
 const Page = () => {
@@ -62,14 +62,14 @@ const Page = () => {
       <main>
         <Bio />
         <Banner
-          id="expirience"
-          heading="Expirience"
+          id="Experience"
+          heading="Experience"
           storeRef={storeRef}
         />
         <Carousel
-          Template={Expirience}
-          slides={expiriences}
-          slideName="expirience"
+          Template={Experience}
+          slides={Experiences}
+          slideName="Experience"
         />
         <Banner
           id="projects"

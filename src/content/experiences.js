@@ -1,4 +1,4 @@
-class Expirience {
+class Experience {
   constructor(name, organisation, location, dates, desc, bullets=null) {
     this.name = name
     this.organisation = organisation
@@ -9,15 +9,15 @@ class Expirience {
   }
 }
 
-const expiriences = [
-  new Expirience(
+const Experiences = [
+  new Experience(
     'Software Engineering Immersive',
     'General Assembly',
     'London',
     'June 2019 - September 2019',
-    'I have really enjoyed my time at GA, and having the opportunity to focus entirely on programming in an intensive environment. I had been casually for a couple of years, but the opportunity to be on campus every day, work through problems and learn best practices has been deeply fulfilling. Intensive projects, which form a fundamental part of the GA experience, have reinforced the work done in the classroom, improved the way I explain and discuss code and changed my approach to problem solving.\nI’m excited to be taking these first steps in to what will hopefully be a long and fruitful career and I’m looking forward to joining an industry which offers continued opportunities for training and development.'
+    'I have really enjoyed my time at GA, and having the opportunity to focus entirely on programming in an intensive environment. I had been coding casually for a couple of years, but the opportunity to be on campus every day, work through problems and learn best practices has been deeply fulfilling. Intensive projects, which form a fundamental part of the GA experience, have reinforced the work done in the classroom, improved the way I explain and discuss code and changed my approach to problem solving.\nI’m excited to be taking these first steps into what will hopefully be a long and fruitful career and I’m looking forward to joining an industry which offers continued opportunities for training and development.'
   ),
-  new Expirience(
+  new Experience(
     'Programme Delivery Officer',
     'Youth Business International',
     'London',
@@ -31,7 +31,7 @@ const expiriences = [
       'Liaising with internal teams to agree CRM project requirements and maintaining oversight of those projects with developers'
     ]
   ),
-  new Expirience(
+  new Experience(
     'Streets Investigation Customer\n Service Advisor',
     'Transport For London (TFL)',
     'London',
@@ -44,4 +44,4 @@ const expiriences = [
   )
 ]
 
-export default expiriences
+export default Experiences
