@@ -6,7 +6,6 @@ import { bioImage, bioText } from '../../content/bio'
 import { knownTechs } from '../../content/tech'
 
 const Bio = () => {
-// !!! Add FM image to content folder
   return (
     <section id="bio">
       <div className="container">
