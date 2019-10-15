@@ -1,11 +1,3 @@
-/*!!! Consider reorganising how you put the @medias in:
-  - They should probably fit in directly after the initial properties are declared
-  - The element shouldn't be re announced, or have an &
-*/
-/*!!!
-  - Consider using mixins for repeated collection of properties
-*/
-
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
 
 // Colour Variables
@@ -43,9 +35,9 @@ $width-tablet: 650px;
 $width-desktop: 1000px;
 
 @mixin user-select-none {
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 * {
@@ -68,7 +60,6 @@ body {
       font-weight: normal;
     }
 
-// !!! Why does this need to be explicitly not hero?
     h2:not(.hero) {
       font-size: $font-l;
 
