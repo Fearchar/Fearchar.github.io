@@ -111,6 +111,12 @@ body {
       height: $spacing-xxl;
       color: $font-colour-second;
 
+      div.nav-offset {
+        position: relative;
+        top: -80px;
+        visibility: hidden;
+      }
+
       span {
         position: relative;
         top: 0;
@@ -299,6 +305,16 @@ body {
 
         @media(min-width: $width-desktop) {
           flex-flow: nowrap row;
+        }
+
+        div.nav-offset {
+          position: relative;
+          top: -100px;
+          visibility: hidden;
+
+          @media(min-width: $width-desktop) {
+            top: -380px;
+          }
         }
 
         div.container {

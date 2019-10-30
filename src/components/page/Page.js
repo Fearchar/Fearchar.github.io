@@ -62,7 +62,7 @@ const Page = () => {
       <main>
         <Bio />
         <Banner
-          id="Experience"
+          id="experience"
           heading="Experience"
           storeRef={storeRef}
         />

@@ -7,7 +7,8 @@ import { knownTechs } from '../../content/tech'
 
 const Bio = () => {
   return (
-    <section id="bio">
+    <section>
+      <div className="nav-offset" id="bio"/>
       <div className="container">
         <div className="section-third subsection">
           <TabAnchor href="https://github.com/fearchar">
