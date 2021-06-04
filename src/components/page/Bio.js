@@ -2,8 +2,8 @@ import React from 'react'
 
 import TabAnchor from 'components/shared/TabAnchor'
 import Technology from 'components/shared/Technology'
-import { bioImage, bioText } from '../../content/bio'
-import { knownTechs } from '../../content/tech'
+import { bioImage, bioText } from 'content/bio'
+import { knownTechs } from 'content/tech'
 
 const Bio = () => {
   return (

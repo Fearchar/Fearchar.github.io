@@ -7,8 +7,8 @@ import Banner from './Banner'
 import Carousel from './Carousel'
 import ProjectTemplate from './ProjectTemplate'
 import ExperienceTemplate from './ExperienceTemplate'
-import projects from '../../content/projects'
-import experiences from '../../content/experiences'
+import projects from 'content/projects'
+import experiences from 'content/experiences'
 import textWhipAnimation from 'lib/textWhipAnimation'
 
 const Page = () => {
