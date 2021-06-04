@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Technology from '../shared/Technology'
-import TabAnchor from '../shared/TabAnchor'
+import Technology from 'components/shared/Technology'
+import TabAnchor from 'components/shared/TabAnchor'
 
 const ProjectTemplate = ({ project }) => {
   return (

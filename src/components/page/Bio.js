@@ -1,7 +1,7 @@
 import React from 'react'
 
-import TabAnchor from '../shared/TabAnchor'
-import Technology from '../shared/Technology'
+import TabAnchor from 'components/shared/TabAnchor'
+import Technology from 'components/shared/Technology'
 import { bioImage, bioText } from '../../content/bio'
 import { knownTechs } from '../../content/tech'
 

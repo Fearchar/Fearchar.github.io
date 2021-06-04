@@ -1,6 +1,6 @@
 import React from 'react'
 
-import newLineNodes from '../../lib/newLineNodes'
+import newLineNodes from 'lib/newLineNodes'
 
 const ExperienceTemplate = ({ Experience }) => {
   return (
