@@ -1,8 +1,8 @@
 import React, { useRef, useEffect } from 'react'
 
-import textWhipAnimation from '../../lib/textWhipAnimation'
-import SpanText from '../lib/SpanText'
-import TabAnchor from '../lib/TabAnchor'
+import textWhipAnimation from 'lib/textWhipAnimation'
+import SpanText from 'components/lib/SpanText'
+import TabAnchor from 'components//lib/TabAnchor'
 
 const Hero = ({ isHeroFull, pageNode }) => {
   const h1Ref = useRef(null)
