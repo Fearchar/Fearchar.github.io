@@ -8,14 +8,9 @@ class App extends React.Component {
   constructor() {
     super()
   }
-  render () {
-    return (
-      <Page />
-    )
+  render() {
+    return <Page />
   }
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-)
+ReactDOM.render(<App />, document.getElementById('root'))

@@ -22,12 +22,9 @@ const ProjectTemplate = ({ project }) => {
           </TabAnchor>
         </div>
         <div className="techs">
-          {project.techUsed.map(tech =>
-            <Technology
-              key={tech.name}
-              {...tech}
-            />
-          )}
+          {project.techUsed.map((tech) => (
+            <Technology key={tech.name} {...tech} />
+          ))}
         </div>
         <p>{project.desc}</p>
       </div>

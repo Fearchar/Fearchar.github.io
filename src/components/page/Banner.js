@@ -7,9 +7,9 @@ const Banner = ({ id, heading, storeRef }) => {
   useEffect(() => storeRef(h2Ref), [])
   return (
     <div className="banner">
-      <div className="nav-offset" id={id}/>
+      <div className="nav-offset" id={id} />
       <h2 ref={h2Ref}>
-        <SpanText text={heading}/>
+        <SpanText text={heading} />
       </h2>
     </div>
   )

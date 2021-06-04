@@ -6,7 +6,7 @@ const Carousel = ({ Template, slides, slideName }) => {
   return (
     <section className="carousel">
       {slides.map((slide, i) => {
-        const templateProp = {[slideName]: slide}
+        const templateProp = { [slideName]: slide }
         return (
           <div
             key={slide.name}
@@ -18,11 +18,16 @@ const Carousel = ({ Template, slides, slideName }) => {
             />
             <Template {...templateProp} />
             <i
-              className={`fas fa-chevron-right fa-5x ${i < slides.length - 1 ? 'active' : ''}`}
-              onClick={() => currentSlide < slides.length - 1 && setCurrentSlide(currentSlide + 1)}
+              className={`fas fa-chevron-right fa-5x ${
+                i < slides.length - 1 ? 'active' : ''
+              }`}
+              onClick={() =>
+                currentSlide < slides.length - 1 &&
+                setCurrentSlide(currentSlide + 1)
+              }
             />
             {i !== slides.length - 1 && <hr />}
-          </ div>
+          </div>
         )
       })}
     </section>
