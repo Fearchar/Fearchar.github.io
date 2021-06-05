@@ -358,6 +358,10 @@ body {
             width: 100%;
             padding-top: $spacing-s;
             padding-bottom: $spacing-m;
+
+            p {
+              padding-bottom: $spacing-s;
+            }
           }
 
           div.section-third {

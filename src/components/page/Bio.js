@@ -4,6 +4,7 @@ import TabAnchor from 'components/shared/TabAnchor'
 import Technology from 'components/shared/Technology'
 import { bioImage, bioText } from 'content/bio'
 import { knownTechs } from 'content/tech'
+import newLineNodes from 'lib/newLineNodes'
 
 const Bio = () => {
   return (
@@ -17,7 +18,9 @@ const Bio = () => {
         </div>
         <div className="section-third subsection">
           <h3>My Bio</h3>
-          <p>{bioText}</p>
+          {bioText.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
         </div>
         <div className="section-third subsection">
           <h3>Tech</h3>
