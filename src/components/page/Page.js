@@ -4,10 +4,7 @@ import Navbar from './Navbar'
 import { Hero } from './Hero'
 import { AboutSection } from './sections/AboutSection'
 import { ExperienceSection } from './sections/ExperienceSection'
-import { Banner } from './Banner'
-import Carousel from './Carousel'
-import ProjectTemplate from './ProjectTemplate'
-import projects from 'content/projects'
+import { ProjectsSection } from './sections/ProjectsSections'
 
 export function Page() {
   const [isHeroFull, setIsHeroFull] = useState(true)
@@ -36,12 +33,7 @@ export function Page() {
       <main>
         <AboutSection />
         <ExperienceSection />
-        <Banner id="projects" heading="Projects" />
-        <Carousel
-          Template={ProjectTemplate}
-          slides={projects}
-          slideName="project"
-        />
+        <ProjectsSection />
       </main>
       {/* todo: fm - add footer - maybe here I could say built from scratch in react? */}
     </div>
