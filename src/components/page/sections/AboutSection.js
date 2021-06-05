@@ -4,7 +4,7 @@ import { NewTabAnchor } from 'components/shared/NewTabAnchor'
 import Technology from 'components/shared/Technology'
 import { aboutImage, aboutText } from 'content/about'
 import { knownTechs } from 'content/tech'
-import { Banner } from '../Banner'
+import { Banner } from './Banner'
 
 export function AboutSection() {
   return (
