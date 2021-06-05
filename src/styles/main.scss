@@ -207,7 +207,8 @@ body {
       }
 
       div.hero {
-        height: 475px;
+        /* todo: fm - size using media query*/
+        height: 70vh;
         padding-top: $spacing-xxl;
         padding-bottom: $spacing-ms;
         transition: all 0.5s;
@@ -294,6 +295,27 @@ body {
             flex-direction: row;
           }
         }
+
+        .down-arrow {
+          opacity: 100;
+          transition: opacity 1s;
+
+          &.is-hidden {
+            opacity: 0;
+          }
+        }
+
+        .hero-bottom-divder {
+          /* todo: fm - make less wide? */
+          width: 70vw;
+          border-color: white;
+          opacity: 100;
+          transition: opacity 1s;
+
+          &.is-hidden {
+            opacity: 0;
+          }
+        }
       }
     }
 
@@ -358,6 +380,10 @@ body {
             width: 100%;
             padding-top: $spacing-s;
             padding-bottom: $spacing-m;
+
+            p {
+              padding-bottom: $spacing-s;
+            }
           }
 
           div.section-third {
