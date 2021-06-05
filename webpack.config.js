@@ -21,7 +21,20 @@ module.exports = {
   module: {
     rules: [
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.css$/, loader: ['style-loader', 'css-loader'] },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              modules: true
+            }
+          }
+        ]
+      },
+      /* todo: fm - remove when scss is removed*/
       {
         test: /\.s(a|c)ss$/,
         loader: ['style-loader', 'css-loader', 'sass-loader']
