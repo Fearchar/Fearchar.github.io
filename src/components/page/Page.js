@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 
 import Navbar from './Navbar'
 import { Hero } from './Hero'
-import Bio from './Bio'
+import { Bio } from './Bio'
 import Banner from './Banner'
 import Carousel from './Carousel'
 import ProjectTemplate from './ProjectTemplate'

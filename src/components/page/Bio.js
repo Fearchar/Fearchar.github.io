@@ -4,9 +4,8 @@ import TabAnchor from 'components/shared/TabAnchor'
 import Technology from 'components/shared/Technology'
 import { bioImage, bioText } from 'content/bio'
 import { knownTechs } from 'content/tech'
-import newLineNodes from 'lib/newLineNodes'
 
-const Bio = () => {
+export function Bio() {
   return (
     <section>
       <div className="nav-offset" id="bio" />
@@ -34,5 +33,3 @@ const Bio = () => {
     </section>
   )
 }
-
-export default Bio
