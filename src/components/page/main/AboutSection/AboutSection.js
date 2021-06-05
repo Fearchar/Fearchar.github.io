@@ -17,6 +17,7 @@ export function AboutSection() {
         <div className="container">
           <div className="section-third subsection">
             <NewTabAnchor href="https://github.com/fearchar">
+              {/* todo: fm - get lower res version of image */}
               <img src={aboutImage} alt="Fearchar MacLean" />
             </NewTabAnchor>
           </div>

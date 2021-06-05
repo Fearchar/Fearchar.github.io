@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react'
+import classNames from 'classnames'
 
 import textWhipAnimation from 'lib/textWhipAnimation'
 import SpanText from 'components/shared/SpanText'
@@ -7,7 +8,7 @@ import { NewTabAnchor } from 'components/shared/NewTabAnchor'
 export function Hero({ isHeroFull, pageRef }) {
   const h1Ref = useRef(null)
   useEffect(() => textWhipAnimation(h1Ref.current), [isHeroFull])
-
+  /* todo: fm - remove some of the sharpness from text colours in hero*/
   return (
     <div id="hero" className={`hero banner ${isHeroFull ? 'full' : ''}`}>
       <h1 ref={h1Ref} onClick={() => textWhipAnimation(h1Ref.current)}>
@@ -33,12 +34,19 @@ export function Hero({ isHeroFull, pageRef }) {
           <p>fearchar.maclean@gmail.com</p>
         </NewTabAnchor>
       </div>
-      {isHeroFull && (
-        <i
-          className="fas fa-angle-down fa-5x"
-          onClick={() => pageRef.current.scroll(0, 30)}
-        />
-      )}
+
+      <i
+        className={classNames('fas fa-angle-down fa-5x', 'down-arrow', {
+          ['is-hidden']: !isHeroFull
+        })}
+        /* todo: fm - this should trigger when you click anywhere on the page while the hero is big*/
+        onClick={() => pageRef.current.scroll(0, 30)}
+      />
+      <hr
+        className={classNames('hero-bottom-divder', {
+          ['is-hidden']: isHeroFull
+        })}
+      />
     </div>
   )
 }
