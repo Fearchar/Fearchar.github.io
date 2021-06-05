@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 
-import Navbar from './Navbar'
-import { Hero } from './Hero'
+import Navbar from './header/Navbar'
+import { Hero } from './header/Hero'
 import { AboutSection } from './main/AboutSection/AboutSection'
 import { ExperienceSection } from './main/ExpirienceSection/ExperienceSection'
 import { ProjectsSection } from './main/ProjectsSection/ProjectsSections'
