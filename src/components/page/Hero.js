@@ -13,9 +13,12 @@ export function Hero({ isHeroFull, pageRef }) {
       <h1 ref={h1Ref} onClick={() => textWhipAnimation(h1Ref.current)}>
         <SpanText text="Fearchar MacLean" />
       </h1>
+
       <h2>A Full Stack Developer</h2>
+      {/* todo: fm - change tag line*/}
       <p>with a passion for tabletop gaming,</p>
       <p>music and literature</p>
+
       <div>
         <NewTabAnchor href="https://github.com/Fearchar">
           <i className="devicon-github-plain" />

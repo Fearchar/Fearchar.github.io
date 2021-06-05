@@ -2,7 +2,7 @@ import React from 'react'
 
 import SpanText from 'components/shared/SpanText'
 
-const Banner = ({ id, heading }) => {
+export function Banner({ id, heading }) {
   return (
     <div className="banner">
       <div className="nav-offset" id={id} />
@@ -12,5 +12,3 @@ const Banner = ({ id, heading }) => {
     </div>
   )
 }
-
-export default Banner

@@ -1,8 +1,8 @@
 class Tech {
-  constructor(name, iconName, priority, bioExclude = false) {
+  constructor(name, iconName, priority, aboutExclude = false) {
     ;(this.name = name), (this.iconName = iconName)
     this.priority = priority
-    this.bioExclude = bioExclude
+    this.aboutExclude = aboutExclude
   }
 }
 
