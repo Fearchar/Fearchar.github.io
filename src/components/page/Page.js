@@ -5,7 +5,6 @@ import { Hero } from './header/Hero'
 import { AboutSection } from './main/AboutSection/AboutSection'
 import { ExperienceSection } from './main/ExpirienceSection/ExperienceSection'
 import { ProjectsSection } from './main/ProjectsSection/ProjectsSections'
-import styles from 'styles/test.css'
 
 export function Page() {
   const [isHeroFull, setIsHeroFull] = useState(true)
