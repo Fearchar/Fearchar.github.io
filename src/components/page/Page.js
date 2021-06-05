@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 
 import Navbar from './Navbar'
 import { Hero } from './Hero'
-import { About } from './About'
+import { About } from './sections/About'
 import { Banner } from './Banner'
 import Carousel from './Carousel'
 import ProjectTemplate from './ProjectTemplate'
@@ -35,7 +35,6 @@ export function Page() {
       </header>
 
       <main>
-        <Banner id="about" heading="About" />
         <About />
         <Banner id="experience" heading="Experience" />
         <Carousel
