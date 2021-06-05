@@ -40,7 +40,7 @@ export function Page() {
         <Carousel
           Template={ExperienceTemplate}
           slides={experiences}
-          slideName="Experience"
+          slideName="experience"
         />
         <Banner id="projects" heading="Projects" />
         <Carousel

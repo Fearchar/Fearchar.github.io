@@ -9,7 +9,7 @@ class Experience {
   }
 }
 
-const Experiences = [
+const experiences = [
   new Experience(
     'Software Engineering Immersive',
     'General Assembly',
@@ -44,4 +44,4 @@ const Experiences = [
   )
 ]
 
-export default Experiences
+export default experiences

@@ -2,28 +2,28 @@ import React from 'react'
 
 import newLineNodes from 'lib/newLineNodes'
 
-const ExperienceTemplate = ({ Experience }) => {
+const ExperienceTemplate = ({ experience }) => {
   return (
     <div>
       <div className="section-full subsection">
         <div>
           <div>
-            {newLineNodes(Experience.name, (paragraph, i) => (
+            {newLineNodes(experience.name, (paragraph, i) => (
               <h3 key={i}>{paragraph}</h3>
             ))}
           </div>
-          <h4>{Experience.organisation}</h4>
+          <h4>{experience.organisation}</h4>
           <h5>
-            {Experience.location} | {Experience.dates}
+            {experience.location} | {experience.dates}
           </h5>
         </div>
-        {Experience.desc &&
-          newLineNodes(Experience.desc, (paragraph, i) => (
+        {experience.desc &&
+          newLineNodes(experience.desc, (paragraph, i) => (
             <p key={i}>{paragraph}</p>
           ))}
-        {Experience.bullets && (
+        {experience.bullets && (
           <ul>
-            {Experience.bullets.map((bullet, i) => (
+            {experience.bullets.map((bullet, i) => (
               <li key={i}>
                 <p>{bullet}</p>
               </li>
