@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import { Banner } from './Banner'
-import Carousel from './Carousel'
+import { Banner } from '../shared/Banner'
+import Carousel from '../shared/Carousel'
 import ExperienceTemplate from './ExperienceTemplate'
 import experiences from 'content/experiences'
 

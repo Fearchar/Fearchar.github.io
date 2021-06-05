@@ -2,9 +2,9 @@ import React, { useRef, useState } from 'react'
 
 import Navbar from './Navbar'
 import { Hero } from './Hero'
-import { AboutSection } from './sections/AboutSection'
-import { ExperienceSection } from './sections/ExperienceSection'
-import { ProjectsSection } from './sections/ProjectsSections'
+import { AboutSection } from './main/AboutSection/AboutSection'
+import { ExperienceSection } from './main/ExpirienceSection/ExperienceSection'
+import { ProjectsSection } from './main/ProjectsSection/ProjectsSections'
 
 export function Page() {
   const [isHeroFull, setIsHeroFull] = useState(true)
