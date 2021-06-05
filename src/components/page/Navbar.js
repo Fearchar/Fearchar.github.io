@@ -7,27 +7,23 @@ const Navbar = ({ displayNav }) => {
     setNavOpen(false)
   }
   return (
-    <nav className={`${displayNav ? 'active' : ''} ${ navOpen ? 'open' : ''}`}>
+    <nav className={`${displayNav ? 'active' : ''} ${navOpen ? 'open' : ''}`}>
       <i
         className="fas fa-bars"
-        onClick={() => navOpen ? closeNav() : setNavOpen(true)}
+        onClick={() => (navOpen ? closeNav() : setNavOpen(true))}
       ></i>
-      <a
-        href="#hero"
-        onClick={closeNav}
-      >Home</a>
-      <a
-        href="#bio"
-        onClick={closeNav}
-      >Bio</a>
-      <a
-        href="#experience"
-        onClick={closeNav}
-      >Experience</a>
-      <a
-        href="#projects"
-        onClick={closeNav}
-      >Projects</a>
+      <a href="#hero" onClick={closeNav}>
+        Home
+      </a>
+      <a href="#bio" onClick={closeNav}>
+        Bio
+      </a>
+      <a href="#experience" onClick={closeNav}>
+        Experience
+      </a>
+      <a href="#projects" onClick={closeNav}>
+        Projects
+      </a>
     </nav>
   )
 }

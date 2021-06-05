@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Technology from '../lib/Technology'
-import TabAnchor from '../lib/TabAnchor'
+import Technology from 'components/shared/Technology'
+import TabAnchor from 'components/shared/TabAnchor'
 
 const ProjectTemplate = ({ project }) => {
   return (
@@ -22,12 +22,9 @@ const ProjectTemplate = ({ project }) => {
           </TabAnchor>
         </div>
         <div className="techs">
-          {project.techUsed.map(tech =>
-            <Technology
-              key={tech.name}
-              {...tech}
-            />
-          )}
+          {project.techUsed.map((tech) => (
+            <Technology key={tech.name} {...tech} />
+          ))}
         </div>
         <p>{project.desc}</p>
       </div>

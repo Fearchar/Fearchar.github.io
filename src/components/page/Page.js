@@ -7,9 +7,9 @@ import Banner from './Banner'
 import Carousel from './Carousel'
 import ProjectTemplate from './ProjectTemplate'
 import ExperienceTemplate from './ExperienceTemplate'
-import projects from '../../content/projects'
-import experiences from '../../content/experiences'
-import textWhipAnimation from '../../lib/textWhipAnimation'
+import projects from 'content/projects'
+import experiences from 'content/experiences'
+import textWhipAnimation from 'lib/textWhipAnimation'
 
 const Page = () => {
   const [isHeroFull, setIsHeroFull] = useState(true)
@@ -24,9 +24,12 @@ const Page = () => {
   }
 
   function manageHeadingAnimations(headings) {
-    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+    const viewHeight = Math.max(
+      document.documentElement.clientHeight,
+      window.innerHeight || 0
+    )
     const midPoint = viewHeight / 2
-    headings.forEach(heading => {
+    headings.forEach((heading) => {
       const node = heading.ref.current
       const { top } = node.getBoundingClientRect()
       heading.beenBelowView = heading.beenBelowView || top > viewHeight
@@ -40,7 +43,7 @@ const Page = () => {
   }
 
   function storeRef(ref) {
-    setHeadings(headings => [...headings, { ref: ref, aboveMidPoint: null }])
+    setHeadings((headings) => [...headings, { ref: ref, aboveMidPoint: null }])
   }
 
   return (
@@ -53,29 +56,18 @@ const Page = () => {
       }}
     >
       <header>
-        <Navbar displayNav={!isHeroFull}/>
-        <Hero
-          isHeroFull={isHeroFull}
-          pageNode={pageRef.current}
-        />
+        <Navbar displayNav={!isHeroFull} />
+        <Hero isHeroFull={isHeroFull} pageNode={pageRef.current} />
       </header>
       <main>
         <Bio />
-        <Banner
-          id="experience"
-          heading="Experience"
-          storeRef={storeRef}
-        />
+        <Banner id="experience" heading="Experience" storeRef={storeRef} />
         <Carousel
           Template={ExperienceTemplate}
           slides={experiences}
           slideName="Experience"
         />
-        <Banner
-          id="projects"
-          heading="Projects"
-          storeRef={storeRef}
-        />
+        <Banner id="projects" heading="Projects" storeRef={storeRef} />
         <Carousel
           Template={ProjectTemplate}
           slides={projects}

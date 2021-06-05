@@ -1,15 +1,15 @@
 import React, { useRef, useEffect } from 'react'
 
-import SpanText from '../lib/SpanText'
+import SpanText from 'components/shared/SpanText'
 
 const Banner = ({ id, heading, storeRef }) => {
   const h2Ref = useRef(null)
   useEffect(() => storeRef(h2Ref), [])
   return (
     <div className="banner">
-      <div className="nav-offset" id={id}/>
+      <div className="nav-offset" id={id} />
       <h2 ref={h2Ref}>
-        <SpanText text={heading}/>
+        <SpanText text={heading} />
       </h2>
     </div>
   )
