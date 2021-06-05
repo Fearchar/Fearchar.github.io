@@ -6,7 +6,7 @@ import { aboutImage, aboutText } from 'content/about'
 import { knownTechs } from 'content/tech'
 import { Banner } from '../Banner'
 
-export function About() {
+export function AboutSection() {
   return (
     <>
       {/* todo: fm - move banner into section if you can*/}
