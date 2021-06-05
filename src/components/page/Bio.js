@@ -1,6 +1,6 @@
 import React from 'react'
 
-import TabAnchor from 'components/shared/TabAnchor'
+import { NewTabAnchor } from 'components/shared/NewTabAnchor'
 import Technology from 'components/shared/Technology'
 import { bioImage, bioText } from 'content/bio'
 import { knownTechs } from 'content/tech'
@@ -11,9 +11,9 @@ export function Bio() {
       <div className="nav-offset" id="bio" />
       <div className="container">
         <div className="section-third subsection">
-          <TabAnchor href="https://github.com/fearchar">
+          <NewTabAnchor href="https://github.com/fearchar">
             <img src={bioImage} alt="Fearchar MacLean" />
-          </TabAnchor>
+          </NewTabAnchor>
         </div>
         <div className="section-third subsection">
           <h3>My Bio</h3>

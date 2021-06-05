@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 
 import textWhipAnimation from 'lib/textWhipAnimation'
 import SpanText from 'components/shared/SpanText'
-import TabAnchor from 'components/shared/TabAnchor'
+import { NewTabAnchor } from 'components/shared/NewTabAnchor'
 
 export function Hero({ isHeroFull, pageRef }) {
   const h1Ref = useRef(null)
@@ -17,18 +17,18 @@ export function Hero({ isHeroFull, pageRef }) {
       <p>with a passion for tabletop gaming,</p>
       <p>music and literature</p>
       <div>
-        <TabAnchor href="https://github.com/Fearchar">
+        <NewTabAnchor href="https://github.com/Fearchar">
           <i className="devicon-github-plain" />
           <p>/fearchar</p>
-        </TabAnchor>
-        <TabAnchor href="https://www.linkedin.com/in/fearchar/">
+        </NewTabAnchor>
+        <NewTabAnchor href="https://www.linkedin.com/in/fearchar/">
           <i className="fab fa-linkedin" />
           <p>/fearchar</p>
-        </TabAnchor>
-        <TabAnchor href="mailto: fearchar.maclean@gmail.com">
+        </NewTabAnchor>
+        <NewTabAnchor href="mailto: fearchar.maclean@gmail.com">
           <i className="fas fa-envelope" />
           <p>fearchar.maclean@gmail.com</p>
-        </TabAnchor>
+        </NewTabAnchor>
       </div>
       {isHeroFull && (
         <i
