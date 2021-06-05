@@ -4,7 +4,7 @@ import textWhipAnimation from 'lib/textWhipAnimation'
 import SpanText from 'components/shared/SpanText'
 import TabAnchor from 'components/shared/TabAnchor'
 
-const Hero = ({ isHeroFull, pageNode }) => {
+export function Hero({ isHeroFull, pageRef }) {
   const h1Ref = useRef(null)
   useEffect(() => textWhipAnimation(h1Ref.current), [isHeroFull])
 
@@ -32,8 +32,8 @@ const Hero = ({ isHeroFull, pageNode }) => {
       </div>
       {isHeroFull && (
         <i
-          className="fas fa-angle-down fa-2x"
-          onClick={() => pageNode.scroll(0, 30)}
+          className="fas fa-angle-down fa-5x"
+          onClick={() => pageRef.current.scroll(0, 30)}
         />
       )}
     </div>

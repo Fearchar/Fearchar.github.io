@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 
 import Navbar from './Navbar'
-import Hero from './Hero'
+import { Hero } from './Hero'
 import Bio from './Bio'
 import Banner from './Banner'
 import Carousel from './Carousel'
@@ -31,7 +31,7 @@ export function Page() {
     >
       <header>
         <Navbar displayNav={!isHeroFull} />
-        <Hero isHeroFull={isHeroFull} pageNode={pageRef.current} />
+        <Hero isHeroFull={isHeroFull} pageRef={pageRef} />
       </header>
 
       <main>
