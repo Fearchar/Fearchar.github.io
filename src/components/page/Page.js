@@ -9,41 +9,16 @@ import ProjectTemplate from './ProjectTemplate'
 import ExperienceTemplate from './ExperienceTemplate'
 import projects from 'content/projects'
 import experiences from 'content/experiences'
-import textWhipAnimation from 'lib/textWhipAnimation'
 
-const Page = () => {
+export function Page() {
   const [isHeroFull, setIsHeroFull] = useState(true)
-  const [headings, setHeadings] = useState([
-    /*{ref: nodeRef, beenBelowView: bool, aboveMidPoint: bool}*/
-  ])
   const pageRef = useRef(null)
 
+  /* todo: fm - change pageNode name - maybe pageRefCurrent*/
+  /* todo: fm - perhaps we can describe this in terms of the widnow position*/
   function manageHeroHeight(pageNode) {
     const atTop = pageNode.scrollTop <= 5 ? true : false
     setIsHeroFull(atTop)
-  }
-
-  function manageHeadingAnimations(headings) {
-    const viewHeight = Math.max(
-      document.documentElement.clientHeight,
-      window.innerHeight || 0
-    )
-    const midPoint = viewHeight / 2
-    headings.forEach((heading) => {
-      const node = heading.ref.current
-      const { top } = node.getBoundingClientRect()
-      heading.beenBelowView = heading.beenBelowView || top > viewHeight
-      const aboveMidPoint = top < midPoint
-      if (heading.beenBelowView && aboveMidPoint && !heading.aboveMidPoint) {
-        textWhipAnimation(node)
-        heading.beenBelowView = false
-      }
-      heading.aboveMidPoint = aboveMidPoint
-    })
-  }
-
-  function storeRef(ref) {
-    setHeadings((headings) => [...headings, { ref: ref, aboveMidPoint: null }])
   }
 
   return (
@@ -52,30 +27,29 @@ const Page = () => {
       className="page"
       onScroll={() => {
         manageHeroHeight(pageRef.current)
-        manageHeadingAnimations(headings)
       }}
     >
       <header>
         <Navbar displayNav={!isHeroFull} />
         <Hero isHeroFull={isHeroFull} pageNode={pageRef.current} />
       </header>
+
       <main>
         <Bio />
-        <Banner id="experience" heading="Experience" storeRef={storeRef} />
+        <Banner id="experience" heading="Experience" />
         <Carousel
           Template={ExperienceTemplate}
           slides={experiences}
           slideName="Experience"
         />
-        <Banner id="projects" heading="Projects" storeRef={storeRef} />
+        <Banner id="projects" heading="Projects" />
         <Carousel
           Template={ProjectTemplate}
           slides={projects}
           slideName="project"
         />
       </main>
+      {/* todo: fm - add footer - maybe here I could say built from scratch in react? */}
     </div>
   )
 }
-
-export default Page
