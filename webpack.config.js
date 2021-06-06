@@ -18,6 +18,11 @@ module.exports = {
       content: path.resolve(__dirname, 'src/content/')
     }
   },
+  watch: true,
+  watchOptions: {
+    aggregateTimeout: 300,
+    poll: 1000
+  },
   module: {
     rules: [
       { test: /\.jsx?$/, loader: 'babel-loader', exclude: /node_modules/ },
