@@ -1,10 +1,6 @@
 @value shared: "styles/shared.css";
 @value primary-colour from shared;
 
-.is-full-height {
-  height: 100vh;
-}
-
 /* todo: fm - change to main*/
 .header {
   display: flex;

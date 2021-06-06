@@ -13,10 +13,7 @@ export function Hero({ isHeroFull, pageRef }) {
   /* todo: fm - remove some of the sharpness from text colours in hero*/
 
   return (
-    <div
-      id="hero"
-      className={classNames(styles.main, styles['is-full-height'])}
-    >
+    <div id="hero" className={styles.main}>
       <div className={styles['content']}>
         <h1
           className={styles.title}
