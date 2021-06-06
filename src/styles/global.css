@@ -1,6 +1,14 @@
+@value shared: "styles/shared.css";
+@value secondary-colour from shared;
+
 /* todo: fm - make background on html?*/
 html {
   box-sizing: border-box;
+  background-color: secondary-colour;
+}
+
+body {
+  margin: 0;
 }
 
 *,
