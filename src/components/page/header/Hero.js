@@ -18,29 +18,60 @@ export function Hero({ isHeroFull, pageRef }) {
       className={classNames(styles.main, styles['is-full-height'])}
     >
       <div className={styles['content']}>
-        <h1 ref={h1Ref} onClick={() => textWhipAnimation(h1Ref.current)}>
+        <h1
+          className={styles.title}
+          ref={h1Ref}
+          onClick={() => textWhipAnimation(h1Ref.current)}
+        >
           <SpanText text="Fearchar MacLean" />
         </h1>
 
-        <h2>A Full Stack Developer</h2>
-        {/* todo: fm - change tag line*/}
-        <p>with a passion for tabletop gaming,</p>
-        <p>music and literature</p>
+        <div className={styles['sub-content']}>
+          <h2 className={styles['sub-title']}>A Full Stack Developer</h2>
+          {/* todo: fm - change tag line*/}
+          <p className={styles['sub-description']}>
+            with a passion for tabletop gaming,
+          </p>
+          <p className={styles['sub-description']}>music and literature</p>
+        </div>
 
         <div className={styles['contact-links']}>
           <NewTabAnchor href="https://github.com/Fearchar">
-            <i className="devicon-github-plain" />
-            <p>/fearchar</p>
+            <div>
+              <i
+                className={classNames(
+                  'devicon-github-plain',
+                  styles['contact-icon']
+                )}
+              />
+              <p className={styles['contact-text']}>/fearchar</p>
+            </div>
           </NewTabAnchor>
 
           <NewTabAnchor href="https://www.linkedin.com/in/fearchar/">
-            <i className="fab fa-linkedin" />
-            <p>/fearchar</p>
+            <div>
+              <i
+                className={classNames(
+                  'fab fa-linkedin',
+                  styles['contact-icon']
+                )}
+              />
+              <p className={styles['contact-text']}>/fearchar</p>
+            </div>
           </NewTabAnchor>
 
           <NewTabAnchor href="mailto: fearchar.maclean@gmail.com">
-            <i className="fas fa-envelope" />
-            <p>fearchar.maclean@gmail.com</p>
+            <div>
+              <i
+                className={classNames(
+                  'fas fa-envelope',
+                  styles['contact-icon']
+                )}
+              />
+              <p className={styles['contact-text']}>
+                fearchar.maclean@gmail.com
+              </p>
+            </div>
           </NewTabAnchor>
         </div>
       </div>

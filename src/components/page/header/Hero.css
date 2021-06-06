@@ -1,5 +1,7 @@
-/* todo: fm - split out hero*/
+@value shared: "styles/shared.css";
+@value font-colour-secondary from shared;
 
+/* todo: fm - split out hero*/
 .main {
   display: flex;
   flex-direction: column;
@@ -14,12 +16,64 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
+  height: 18em;
   width: 100vw;
+}
+
+.title {
+  font-size: 5rem;
+
+  color: font-colour-secondary;
+}
+
+.sub-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 8rem;
+
+  color: font-colour-secondary;
+}
+
+.sub-title {
+  font-size: 3rem;
+}
+
+.sub-description {
+  font-size: 1.5rem;
+
+  color: font-colour-secondary;
 }
 
 .contact-links {
   display: flex;
   justify-content: space-between;
+
+  width: 40rem;
+}
+
+.contact-icon {
+  display: inline;
+
+  color: font-colour-secondary;
+}
+
+.contact-icon:hover {
+  color: grey;
+}
+
+.contact-text {
+  display: inline;
+  margin-left: 0.5rem;
+  font-weight: bold;
+
+  color: font-colour-secondary;
+}
+
+.contact-text:hover {
+  color: grey;
 }

@@ -25,4 +25,9 @@ p,
 a {
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
+  font-weight: lighter;
+}
+
+a {
+  text-decoration: none;
 }
