@@ -1,11 +1,10 @@
 import React, { useRef, useState } from 'react'
 
-import Navbar from './header/Navbar'
-import { Hero } from './header/Hero'
 import { AboutSection } from './main/AboutSection/AboutSection'
 import { ExperienceSection } from './main/ExpirienceSection/ExperienceSection'
 import { ProjectsSection } from './main/ProjectsSection/ProjectsSections'
 import styles from './Page.css'
+import { Header } from './Header/Header'
 
 export function Page() {
   const [isHeroFull, setIsHeroFull] = useState(true)
@@ -21,15 +20,11 @@ export function Page() {
   return (
     <div
       ref={pageRef}
-      className={styles.page}
       onScroll={() => {
         manageHeroHeight(pageRef.current)
       }}
     >
-      <header>
-        <Navbar displayNav={!isHeroFull} />
-        <Hero isHeroFull={isHeroFull} pageRef={pageRef} />
-      </header>
+      <Header isHeroFull={isHeroFull} pageRef={pageRef} />
 
       <main>
         <AboutSection />

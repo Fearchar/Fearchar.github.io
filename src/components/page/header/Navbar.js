@@ -1,31 +1,33 @@
-import React, { useState } from 'react'
+import React from 'react'
+import classNames from 'classnames'
 
-const Navbar = ({ displayNav }) => {
-  const [navOpen, setNavOpen] = useState(false)
+import styles from './Navbar.css'
 
-  function closeNav() {
-    setNavOpen(false)
-  }
+export function Navbar({ displayNav }) {
+  const [isNavOpen, setIsNavOpen] = React.useState(false)
+
   return (
-    <nav className={`${displayNav ? 'active' : ''} ${navOpen ? 'open' : ''}`}>
+    <nav className={classNames({ [styles['is-hidden']]: displayNav })}>
       <i
         className="fas fa-bars"
-        onClick={() => (navOpen ? closeNav() : setNavOpen(true))}
+        onClick={() => (isNavOpen ? setIsNavOpen(false) : setIsNavOpen(true))}
       ></i>
-      <a href="#hero" onClick={closeNav}>
+
+      <a href="#hero" onClick={() => setIsNavOpen(false)}>
         Home
       </a>
-      <a href="#about" onClick={closeNav}>
+
+      <a href="#about" onClick={() => setIsNavOpen(false)}>
         About
       </a>
-      <a href="#experience" onClick={closeNav}>
+
+      <a href="#experience" onClick={() => setIsNavOpen(false)}>
         Experience
       </a>
-      <a href="#projects" onClick={closeNav}>
+
+      <a href="#projects" onClick={() => setIsNavOpen(false)}>
         Projects
       </a>
     </nav>
   )
 }
-
-export default Navbar

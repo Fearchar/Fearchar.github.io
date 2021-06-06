@@ -1,3 +1,4 @@
+/* todo: fm - componentise and stop using refs*/
 function textWhipAnimation(node, repetitions = 2) {
   const charSpans = node.children
   for (let i = 0; i < repetitions * charSpans.length * 2; i++) {

@@ -1,8 +1,1 @@
-@value shared: "styles/shared.css";
-@value secondary-colour from shared;
-
-.page {
-  width: 100vw;
-  height: 100vh;
-  background-color: secondary-colour;
-}
+/* todo: fm - delete if not used*/
