@@ -10,25 +10,29 @@ export function Hero({ isHeroFull, pageRef }) {
   useEffect(() => textWhipAnimation(h1Ref.current), [isHeroFull])
   /* todo: fm - remove some of the sharpness from text colours in hero*/
   return (
-    <div id="hero" className={`hero banner ${isHeroFull ? 'full' : ''}`}>
+    <div id="hero">
       <h1 ref={h1Ref} onClick={() => textWhipAnimation(h1Ref.current)}>
         <SpanText text="Fearchar MacLean" />
       </h1>
 
-      <h2>A Full Stack Developer</h2>
-      {/* todo: fm - change tag line*/}
-      <p>with a passion for tabletop gaming,</p>
-      <p>music and literature</p>
+      <div>
+        <h2>A Full Stack Developer</h2>
+        {/* todo: fm - change tag line*/}
+        <p>with a passion for tabletop gaming,</p>
+        <p>music and literature</p>
+      </div>
 
       <div>
         <NewTabAnchor href="https://github.com/Fearchar">
           <i className="devicon-github-plain" />
           <p>/fearchar</p>
         </NewTabAnchor>
+
         <NewTabAnchor href="https://www.linkedin.com/in/fearchar/">
           <i className="fab fa-linkedin" />
           <p>/fearchar</p>
         </NewTabAnchor>
+
         <NewTabAnchor href="mailto: fearchar.maclean@gmail.com">
           <i className="fas fa-envelope" />
           <p>fearchar.maclean@gmail.com</p>
@@ -36,14 +40,14 @@ export function Hero({ isHeroFull, pageRef }) {
       </div>
 
       <i
-        className={classNames('fas fa-angle-down fa-5x', 'down-arrow', {
+        className={classNames('fas fa-angle-down fa-5x', {
           ['is-hidden']: !isHeroFull
         })}
         /* todo: fm - this should trigger when you click anywhere on the page while the hero is big*/
         onClick={() => pageRef.current.scroll(0, 30)}
       />
       <hr
-        className={classNames('hero-bottom-divder', {
+        className={classNames({
           ['is-hidden']: isHeroFull
         })}
       />

@@ -5,6 +5,7 @@ import { Hero } from './header/Hero'
 import { AboutSection } from './main/AboutSection/AboutSection'
 import { ExperienceSection } from './main/ExpirienceSection/ExperienceSection'
 import { ProjectsSection } from './main/ProjectsSection/ProjectsSections'
+import styles from './Page.css'
 
 export function Page() {
   const [isHeroFull, setIsHeroFull] = useState(true)
@@ -20,7 +21,7 @@ export function Page() {
   return (
     <div
       ref={pageRef}
-      className={styles['test-class'] + ' page'}
+      className={styles.page}
       onScroll={() => {
         manageHeroHeight(pageRef.current)
       }}
