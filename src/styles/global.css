@@ -1,5 +1,10 @@
 @value shared: "styles/shared.css";
 @value secondary-colour from shared;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 /* todo: fm - make background on html?*/
 html {
@@ -11,8 +16,13 @@ body {
   margin: 0;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+figure {
+  font-family: 'Ubuntu', sans-serif;
 }
