@@ -12,6 +12,11 @@ export function Header({ atStartingPosition, pageRef }) {
       {/* debug: fm - */}
       {/* {!atStartingPosition && <Navbar />} */}
       <Hero atStartingPosition={atStartingPosition} pageRef={pageRef} />
+      <hr
+        className={classNames(styles.divider, {
+          [styles['is-hidden']]: atStartingPosition
+        })}
+      />
     </header>
   )
 }

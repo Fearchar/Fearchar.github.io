@@ -1,11 +1,24 @@
 @value shared: "styles/shared.css";
-@value primary-colour from shared;
+@value secondary-colour from shared;
 
 /* todo: fm - change to main*/
 .header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  background-color: primary-colour;
+  background-color: secondary-colour;
+}
+
+.divider {
+  width: 50vw;
+
+  color: font-colour-secondary;
+  opacity: 100%;
+  transition: opacity 1s;
+}
+
+.is-hidden {
+  opacity: 0%;
 }

@@ -37,7 +37,7 @@ export function Hero({ atStartingPosition, pageRef }) {
                   styles['contact-icon']
                 )}
               />
-              <p className={styles['contact-text']}>/fearchar</p>
+              <p className={styles['contact-text']}>/ fearchar</p>
             </div>
           </NewTabAnchor>
 
@@ -49,7 +49,7 @@ export function Hero({ atStartingPosition, pageRef }) {
                   styles['contact-icon']
                 )}
               />
-              <p className={styles['contact-text']}>/fearchar</p>
+              <p className={styles['contact-text']}>/ fearchar</p>
             </div>
           </NewTabAnchor>
 
@@ -77,16 +77,10 @@ export function Hero({ atStartingPosition, pageRef }) {
           )}
           /* todo: fm - this should trigger when you click anywhere on the page while the hero is big*/
           onClick={() =>
-            pageRef.current.scroll({ top: 300, behavior: 'smooth' })
+            pageRef.current.scroll({ top: 400, behavior: 'smooth' })
           }
         />
       </div>
-
-      <hr
-        className={classNames(styles.divider, {
-          [styles['is-hidden']]: atStartingPosition
-        })}
-      />
     </div>
   )
 }
