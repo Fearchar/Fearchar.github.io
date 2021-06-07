@@ -1,0 +1,15 @@
+@value shared: "styles/shared.css";
+@value secondary-colour, font-colour-secondary, font-size-l from shared;
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 6rem;
+
+  font-size: font-size-l;
+
+  color: font-colour-secondary;
+  background-color: secondary-colour;
+}
