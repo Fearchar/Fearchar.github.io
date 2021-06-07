@@ -1,0 +1,43 @@
+@value shared: "styles/shared.css";
+@value font-size-m from shared;
+
+.main {
+  /* todo: fm - variablise if sticks?*/
+  height: 100vh;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: inherit;
+  /* todo: fm - use shared banner height*/
+  height: calc(100vh - 6rem);
+}
+
+.content {
+  width: 60rem;
+}
+
+.top-content {
+  display: flex;
+  margin-bottom: 6rem;
+}
+
+.profile-image {
+  width: 15rem;
+}
+
+.bio {
+  /* todo: fm - variabilise gutter*/
+  margin-left: 6rem;
+  font-size: font-size-m;
+}
+
+.bio-paragraph {
+  margin-bottom: 1rem;
+}
+
+.tech-icons {
+  display: flex;
+}

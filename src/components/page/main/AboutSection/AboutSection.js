@@ -6,39 +6,46 @@ import { aboutImage, aboutText } from 'content/about'
 import { knownTechs } from 'content/tech'
 import { Banner } from '../shared/Banner'
 
+import styles from './AboutSection.css'
+
 export function AboutSection() {
   return (
-    <>
-      {/* todo: fm - move banner into section if you can*/}
+    <section className={styles.main}>
       <Banner id="about" heading="About" />
 
-      <section>
-        <div className="nav-offset" />
-        <div className="container">
-          <div className="section-third subsection">
-            <NewTabAnchor href="https://github.com/fearchar">
-              {/* todo: fm - get lower res version of image */}
-              <img src={aboutImage} alt="Fearchar MacLean" />
-            </NewTabAnchor>
+      <div className={styles['content-container']}>
+        <div className={styles.content}>
+          <div className={styles['top-content']}>
+            <div>
+              <NewTabAnchor href="https://github.com/fearchar">
+                {/* todo: fm - get lower res version of image */}
+                <img
+                  className={styles['profile-image']}
+                  src={aboutImage}
+                  alt="Fearchar MacLean"
+                />
+              </NewTabAnchor>
+            </div>
+
+            <div className={styles.bio}>
+              {aboutText.map((paragraph, i) => (
+                <p className={styles['bio-paragraph']} key={i}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
 
-          <div className="section-third subsection">
-            <h3>My About</h3>
-            {aboutText.map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
-          </div>
-
-          <div className="section-third subsection">
+          <div>
             <h3>Tech</h3>
-            <div className="techs">
+            <div className={styles['tech-icons']}>
               {knownTechs.map((tech) => (
                 <Technology key={tech.name} {...tech} />
               ))}
             </div>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }
