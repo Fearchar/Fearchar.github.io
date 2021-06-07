@@ -3,28 +3,29 @@ import React, { useRef, useState } from 'react'
 import { AboutSection } from './main/AboutSection/AboutSection'
 import { ExperienceSection } from './main/ExpirienceSection/ExperienceSection'
 import { ProjectsSection } from './main/ProjectsSection/ProjectsSections'
-import styles from './Page.css'
 import { Header } from './Header/Header'
 
+import styles from './Page.css'
+
 export function Page() {
-  const [isHeroFull, setIsHeroFull] = useState(true)
+  const [atStartingPosition, setAtStartingPosition] = useState(true)
   const pageRef = useRef(null)
 
   /* todo: fm - change pageNode name - maybe pageRefCurrent*/
   /* todo: fm - perhaps we can describe this in terms of the widnow position*/
   function manageHeroHeight(pageNode) {
     const atTop = pageNode.scrollTop <= 5 ? true : false
-    setIsHeroFull(atTop)
+
+    setAtStartingPosition(atTop)
   }
 
   return (
     <div
       ref={pageRef}
-      onScroll={() => {
-        manageHeroHeight(pageRef.current)
-      }}
+      className={styles.main}
+      onScroll={() => manageHeroHeight(pageRef.current)}
     >
-      <Header isHeroFull={isHeroFull} pageRef={pageRef} />
+      <Header atStartingPosition={atStartingPosition} pageRef={pageRef} />
 
       <main>
         <AboutSection />

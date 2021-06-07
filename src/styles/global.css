@@ -9,6 +9,7 @@
 /* todo: fm - make background on html?*/
 html {
   box-sizing: border-box;
+  /* todo: fm - make backgound banner / footer black so that when you over scroll the blue doesn't show through*/
   background-color: secondary-colour;
 }
 

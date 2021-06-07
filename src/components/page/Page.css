@@ -1,1 +1,8 @@
 /* todo: fm - delete if not used*/
+.main {
+  height: 100vh;
+  /* todo: fm - needed?*/
+  -webkit-overflow-scrolling: touch;
+
+  overflow-y: scroll;
+}

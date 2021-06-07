@@ -10,6 +10,12 @@
 
   width: 100vw;
   height: 100vh;
+
+  transition: height 1s;
+}
+
+.main.is-reduced {
+  height: 50vh;
 }
 
 .content {
@@ -18,7 +24,7 @@
   align-items: center;
   justify-content: space-between;
 
-  height: 18em;
+  height: 30em;
   width: 100vw;
 }
 
@@ -63,6 +69,8 @@
 .contact-text {
   display: inline;
   margin-left: 0.5rem;
+
+  font-size: 1.2rem;
   font-weight: bold;
 
   color: font-colour-secondary;
@@ -70,4 +78,22 @@
 
 .contact-text:hover {
   color: grey;
+}
+
+.down-arrow {
+  color: font-colour-secondary;
+
+  opacity: 100%;
+  transition: opacity 1s;
+}
+
+.divider {
+  width: 50vw;
+
+  opacity: 100%;
+  transition: opacity 1s;
+}
+
+.is-hidden {
+  opacity: 0%;
 }

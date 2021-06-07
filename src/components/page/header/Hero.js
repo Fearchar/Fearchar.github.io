@@ -1,19 +1,23 @@
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
 import classNames from 'classnames'
 
-import SpanText from 'components/shared/SpanText'
 import { NewTabAnchor } from 'components/shared/NewTabAnchor'
 
 import styles from './Hero.css'
 import { Title } from './Title'
 
-export function Hero({ isHeroFull, pageRef }) {
+export function Hero({ atStartingPosition, pageRef }) {
   /* todo: fm - remove some of the sharpness from text colours in hero*/
 
   return (
-    <div id="hero" className={styles.main}>
+    <div
+      id="hero"
+      className={classNames(styles.main, {
+        [styles['is-reduced']]: !atStartingPosition
+      })}
+    >
       <div className={styles['content']}>
-        <Title isHeroFull={isHeroFull} />
+        <Title atStartingPosition={atStartingPosition} />
 
         <div className={styles['sub-content']}>
           <h2 className={styles['sub-title']}>A Full Stack Developer</h2>
@@ -63,18 +67,24 @@ export function Hero({ isHeroFull, pageRef }) {
             </div>
           </NewTabAnchor>
         </div>
+        <i
+          className={classNames(
+            'fas fa-angle-down fa-4x',
+            styles['down-arrow'],
+            {
+              [styles['is-hidden']]: !atStartingPosition
+            }
+          )}
+          /* todo: fm - this should trigger when you click anywhere on the page while the hero is big*/
+          onClick={() =>
+            pageRef.current.scroll({ top: 300, behavior: 'smooth' })
+          }
+        />
       </div>
 
-      <i
-        className={classNames('fas fa-angle-down fa-5x', {
-          ['is-hidden']: !isHeroFull
-        })}
-        /* todo: fm - this should trigger when you click anywhere on the page while the hero is big*/
-        onClick={() => pageRef.current.scroll(0, 30)}
-      />
       <hr
-        className={classNames({
-          ['is-hidden']: isHeroFull
+        className={classNames(styles.divider, {
+          [styles['is-hidden']]: atStartingPosition
         })}
       />
     </div>
