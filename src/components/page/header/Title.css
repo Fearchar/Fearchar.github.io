@@ -1,0 +1,18 @@
+@value shared: "styles/shared.css";
+@value font-colour-secondary from shared;
+
+.main {
+  font-size: 5rem;
+
+  color: font-colour-secondary;
+}
+
+.character {
+  position: relative;
+  top: 0;
+  transition: top 0.3s;
+}
+
+.is-raised {
+  top: -20px;
+}

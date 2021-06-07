@@ -1,27 +1,19 @@
 import React, { useRef, useEffect } from 'react'
 import classNames from 'classnames'
 
-import textWhipAnimation from 'lib/textWhipAnimation'
 import SpanText from 'components/shared/SpanText'
 import { NewTabAnchor } from 'components/shared/NewTabAnchor'
 
 import styles from './Hero.css'
+import { Title } from './Title'
 
 export function Hero({ isHeroFull, pageRef }) {
-  const h1Ref = useRef(null)
-  useEffect(() => textWhipAnimation(h1Ref.current), [isHeroFull])
   /* todo: fm - remove some of the sharpness from text colours in hero*/
 
   return (
     <div id="hero" className={styles.main}>
       <div className={styles['content']}>
-        <h1
-          className={styles.title}
-          ref={h1Ref}
-          onClick={() => textWhipAnimation(h1Ref.current)}
-        >
-          <SpanText text="Fearchar MacLean" />
-        </h1>
+        <Title isHeroFull={isHeroFull} />
 
         <div className={styles['sub-content']}>
           <h2 className={styles['sub-title']}>A Full Stack Developer</h2>

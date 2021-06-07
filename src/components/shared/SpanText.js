@@ -1,3 +1,4 @@
+/* todo: fm - delete*/
 import React from 'react'
 
 const SpanText = ({ text }) =>
