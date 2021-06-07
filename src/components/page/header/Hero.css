@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: space-between;
 
-  height: 30em;
+  height: 30rem;
   width: 100vw;
 }
 
@@ -34,7 +34,7 @@
   align-items: center;
   justify-content: space-between;
 
-  height: 8rem;
+  height: 10rem;
 
   color: font-colour-secondary;
 }
