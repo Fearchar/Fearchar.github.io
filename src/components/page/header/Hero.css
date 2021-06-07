@@ -1,5 +1,5 @@
 @value shared: "styles/shared.css";
-@value font-colour-secondary from shared;
+@value font-colour-secondary, font-size-s, font-size-m, font-size-l, font-size-xl from shared;
 
 /* todo: fm - split out hero*/
 .main {
@@ -40,7 +40,7 @@
 }
 
 .sub-title {
-  font-size: 3rem;
+  font-size: font-size-l;
 }
 
 .sub-description {
@@ -68,9 +68,9 @@
 
 .contact-text {
   display: inline;
-  margin-left: 0.5rem;
+  margin-left: font-size-m;
 
-  font-size: 1.2rem;
+  font-size: font-size-s;
   font-weight: bold;
 
   color: font-colour-secondary;

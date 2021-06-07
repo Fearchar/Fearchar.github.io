@@ -1,8 +1,8 @@
 @value shared: "styles/shared.css";
-@value font-colour-secondary from shared;
+@value font-colour-secondary, font-size-xl from shared;
 
 .main {
-  font-size: 5rem;
+  font-size: font-size-xl;
 
   color: font-colour-secondary;
 }
