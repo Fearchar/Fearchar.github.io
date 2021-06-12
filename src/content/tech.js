@@ -1,11 +1,7 @@
 class Tech {
-  constructor(name, iconName, priority, aboutExclude = false) {
+  constructor(name, iconName) {
     this.name = name
     this.iconName = iconName
-    /* todo: fm - delete priorits*/
-    this.priority = priority
-    /* todo: fm - delete aboutExclude*/
-    this.aboutExclude = aboutExclude
   }
 }
 /* todo: fm - labele all constants as constants?*/
@@ -38,30 +34,30 @@ const TECH_NAMES = {
 /* todo: fm - update all to svg versions - iuse docker as an example?*/
 /* todo: fm - not using prioties, should just order them myself*/
 export const KNOWN_TECHS = [
-  new Tech(TECH_NAMES['js'], 'javascript-plain', 10),
-  new Tech(TECH_NAMES['react'], 'react-original', 8),
-  new Tech(TECH_NAMES['mongodb'], 'mongodb-plain', 6),
-  new Tech(TECH_NAMES['mocha'], 'mocha-plain', 5),
-  new Tech(TECH_NAMES['bable'], 'babel-plain', 7),
-  new Tech(TECH_NAMES['webpack'], 'webpack-plain', 7.3),
-  new Tech(TECH_NAMES['python'], 'python-plain', 3),
-  new Tech(TECH_NAMES['node'], 'nodejs-plain', 7),
-  new Tech(TECH_NAMES['html'], 'html5-plain', 9),
-  new Tech(TECH_NAMES['css'], 'css3-plain', 9),
-  new Tech(TECH_NAMES['scss'], 'sass-original', 8),
-  new Tech(TECH_NAMES['django'], 'django-plain', 3),
-  new Tech(TECH_NAMES['express'], 'express-original', 6),
-  new Tech(TECH_NAMES['git'], 'git-plain', 8),
-  new Tech(TECH_NAMES['postgres'], 'postgresql-plain', 3),
+  new Tech(TECH_NAMES['js'], 'javascript-plain'),
+  new Tech(TECH_NAMES['react'], 'react-original'),
+  new Tech(TECH_NAMES['mongodb'], 'mongodb-plain'),
+  new Tech(TECH_NAMES['mocha'], 'mocha-plain'),
+  new Tech(TECH_NAMES['bable'], 'babel-plain'),
+  new Tech(TECH_NAMES['webpack'], 'webpack-plain'),
+  new Tech(TECH_NAMES['python'], 'python-plain'),
+  new Tech(TECH_NAMES['node'], 'nodejs-plain'),
+  new Tech(TECH_NAMES['html'], 'html5-plain'),
+  new Tech(TECH_NAMES['css'], 'css3-plain'),
+  new Tech(TECH_NAMES['scss'], 'sass-original'),
+  new Tech(TECH_NAMES['django'], 'django-plain'),
+  new Tech(TECH_NAMES['express'], 'express-original'),
+  new Tech(TECH_NAMES['git'], 'git-plain'),
+  new Tech(TECH_NAMES['postgres'], 'postgresql-plain'),
   /* todo: fm - sort out priorities*/
-  new Tech(TECH_NAMES['heroku'], 'heroku-original', 5),
-  new Tech(TECH_NAMES['sqlalchemy'], 'sqlalchemy-plain', 5),
-  new Tech(TECH_NAMES['redux'], 'redux-original', 5),
-  new Tech(TECH_NAMES['docker'], 'docker-plain', 5),
-  new Tech(TECH_NAMES['aws'], 'amazonwebservices-original', 5),
-  new Tech(TECH_NAMES['bootstrap'], 'bootstrap-plain', 5),
-  new Tech(TECH_NAMES['ts'], 'typescript-plain', 5),
-  new Tech(TECH_NAMES['myPy'], null, 5),
+  new Tech(TECH_NAMES['heroku'], 'heroku-original'),
+  new Tech(TECH_NAMES['sqlalchemy'], 'sqlalchemy-plain'),
+  new Tech(TECH_NAMES['redux'], 'redux-original'),
+  new Tech(TECH_NAMES['docker'], 'docker-plain'),
+  new Tech(TECH_NAMES['aws'], 'amazonwebservices-original'),
+  new Tech(TECH_NAMES['bootstrap'], 'bootstrap-plain'),
+  new Tech(TECH_NAMES['ts'], 'typescript-plain'),
+  new Tech(TECH_NAMES['myPy'], null),
 ]
 
 /* todo: fm - reorder*/
