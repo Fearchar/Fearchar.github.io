@@ -21,7 +21,7 @@
 
 .top-content {
   display: flex;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 
 .profile-image {
@@ -45,4 +45,6 @@
 
 .tech-icons {
   display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
 }
