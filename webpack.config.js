@@ -6,7 +6,7 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve('dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   devtool: 'source-maps',
   resolve: {
@@ -15,13 +15,13 @@ module.exports = {
       lib: path.resolve(__dirname, 'src/lib/'),
       components: path.resolve(__dirname, 'src/components/'),
       styles: path.resolve(__dirname, 'src/styles/'),
-      content: path.resolve(__dirname, 'src/content/')
-    }
+      content: path.resolve(__dirname, 'src/content/'),
+    },
   },
   watch: true,
   watchOptions: {
     aggregateTimeout: 300,
-    poll: 1000
+    poll: 1000,
   },
   module: {
     rules: [
@@ -35,32 +35,32 @@ module.exports = {
             options: {
               importLoaders: 1,
               modules: {
-                localIdentName: '[path][name]__[local]--[hash:base64:5]'
-              }
-            }
-          }
-        ]
+                localIdentName: '[hash:base64:5]-[path]--[name]-[local]',
+              },
+            },
+          },
+        ],
       },
       /* todo: fm - remove when scss is removed*/
       {
         test: /\.s(a|c)ss$/,
-        loader: ['style-loader', 'css-loader', 'sass-loader']
-      }
-    ]
+        loader: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
   },
   devServer: {
     contentBase: path.resolve('src'),
     hot: true,
     open: true,
     port: 8000,
-    watchContentBase: true
+    watchContentBase: true,
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       filename: 'index.html',
-      inject: 'body'
-    })
-  ]
+      inject: 'body',
+    }),
+  ],
 }
