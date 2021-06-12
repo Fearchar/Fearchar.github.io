@@ -1,9 +1,10 @@
 /* todo: fm - make naming convention consitent so either secondary comes at the beginning or end*/
 /* todo: fm - move this or split up*/
-@value primary-colour: #4a6f9e;
-@value secondary-colour: #272727;
+@value background-colour-primary: #4a6f9e;
+@value background-colour-secondary: #272727;
 /* todo: fm - make brighter?*/
 @value font-colour-secondary: #d8d4d4;
+@value font-colour-primary: #0e0e0e;
 
 @value font-size-s: 1.2rem;
 @value font-size-m: 1.5rem;

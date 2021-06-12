@@ -1,5 +1,5 @@
 @value shared: "styles/shared.css";
-@value secondary-colour from shared;
+@value background-colour-secondary from shared;
 
 /* todo: fm - change to main*/
 .header {
@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
 
-  background-color: secondary-colour;
+  background-color: background-colour-secondary;
 }
 
 .divider {

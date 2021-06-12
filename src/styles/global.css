@@ -1,5 +1,5 @@
 @value shared: "styles/shared.css";
-@value primary-colour from shared;
+@value background-colour-primary from shared;
 *,
 *:before,
 *:after {
@@ -10,7 +10,7 @@
 html {
   box-sizing: border-box;
   /* todo: fm - make backgound banner / footer black so that when you over scroll the blue doesn't show through*/
-  background-color: primary-colour;
+  background-color: background-colour-primary;
 }
 
 body {
