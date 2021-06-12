@@ -1,3 +1,4 @@
+/* todo: fm - drop the s at the end of the name*/
 import * as React from 'react'
 
 import { Banner } from '../shared/Banner'
