@@ -1,5 +1,5 @@
 @value shared: "styles/shared.css";
-@value font-size-m, font-colour-primary font from shared;
+@value font-size-m, font-colour-primary from shared;
 
 .main {
   /* todo: fm - variablise if sticks?*/
@@ -21,7 +21,7 @@
 
 .top-content {
   display: flex;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .profile-image {
@@ -32,8 +32,10 @@
 
 .bio {
   /* todo: fm - variabilise gutter*/
-  margin-left: 6rem;
+  margin-left: 5rem;
+
   font-size: font-size-m;
+  text-align: justify;
 }
 
 .bio-paragraph {
