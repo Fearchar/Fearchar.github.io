@@ -1,5 +1,5 @@
 @value shared: "styles/shared.css";
-@value font-size-m from shared;
+@value font-size-m, font-colour-primary font from shared;
 
 .main {
   /* todo: fm - variablise if sticks?*/
@@ -26,6 +26,8 @@
 
 .profile-image {
   width: 15rem;
+  /* todo: fm - add border? */
+  border-radius: 1px;
 }
 
 .bio {
@@ -36,6 +38,9 @@
 
 .bio-paragraph {
   margin-bottom: 1rem;
+  line-height: 2.1rem;
+
+  color: font-colour-primary;
 }
 
 .tech-icons {
