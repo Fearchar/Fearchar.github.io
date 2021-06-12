@@ -1,8 +1,21 @@
+@value shared: "styles/shared.css";
+@value font-colour-primary from shared;
+
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   width: 10rem;
-  height: 5rem;
+  height: 5.5rem;
+}
+
+.icon {
+  font-size: 3rem;
+  color: #101010;
+}
+
+.name {
+  font-size: 1.2rem;
+  color: font-colour-primary;
 }

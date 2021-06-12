@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 
 import styles from './Technology.css'
 
@@ -7,13 +8,13 @@ export function Technology({ name, iconName }) {
     <div className={styles.main}>
       {iconName ? (
         <>
-          <i className={`devicon-${iconName}`} />
-          <h5>{name}</h5>
+          <i className={classNames(styles.icon, `devicon-${iconName}`)} />
+          <p className={styles.name}>{name}</p>
         </>
       ) : (
-        <h5>
+        <p className={styles.name}>
           <strong>{name}</strong>
-        </h5>
+        </p>
       )}
     </div>
   )
