@@ -1,8 +1,10 @@
 import React from 'react'
 
+import styles from './Technology.css'
+
 export function Technology({ name, iconName }) {
   return (
-    <div>
+    <div className={styles.main}>
       {iconName ? (
         <>
           <i className={`devicon-${iconName}`} />
