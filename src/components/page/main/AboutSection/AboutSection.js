@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { NewTabAnchor } from 'components/shared/NewTabAnchor'
-import Technology from 'components/shared/Technology'
+import { Technology } from 'components/shared/Technology'
 import { aboutImage, aboutText } from 'content/about'
 import { knownTechs } from 'content/tech'
 import { Banner } from '../shared/Banner'
@@ -37,7 +37,8 @@ export function AboutSection() {
           </div>
 
           <div>
-            <h3>Tech</h3>
+            {/* debug: fm - */}
+            {/* <h3>Tech</h3> */}
             <div className={styles['tech-icons']}>
               {knownTechs.map((tech) => (
                 <Technology key={tech.name} {...tech} />

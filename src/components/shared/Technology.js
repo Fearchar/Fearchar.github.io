@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Technology = ({ name, iconName }) => {
+export function Technology({ name, iconName }) {
   return (
     <div>
       {iconName && <i className={`devicon-${iconName}`} />}
@@ -13,5 +13,3 @@ const Technology = ({ name, iconName }) => {
     </div>
   )
 }
-
-export default Technology

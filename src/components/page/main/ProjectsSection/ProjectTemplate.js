@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Technology from 'components/shared/Technology'
+import { Technology } from 'components/shared/Technology'
 import { NewTabAnchor } from 'components/shared/NewTabAnchor'
 
 const ProjectTemplate = ({ project }) => {
