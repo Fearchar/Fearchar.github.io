@@ -16,7 +16,7 @@ export function AboutSection() {
       <div className={styles['content-container']}>
         <div className={styles.content}>
           <div className={styles['top-content']}>
-            <div>
+            <div className={styles['profile-image-container']}>
               <NewTabAnchor href="https://github.com/fearchar">
                 {/* todo: fm - get lower res version of image */}
                 <img

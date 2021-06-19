@@ -1,9 +1,11 @@
 @value shared: "styles/shared.css";
-@value font-size-m, font-size-ml, font-colour-primary, background-colour-secondary from shared;
+@value width-mobile, width-desktop, font-size-m, font-size-ml, font-colour-primary, background-colour-secondary from shared;
 
-.main {
-  /* todo: fm - variablise if sticks?*/
-  height: 100vh;
+@media (min-width: width-mobile) {
+  .main {
+    /* todo: fm - variablise if sticks?*/
+    height: 100vh;
+  }
 }
 
 .content-container {
@@ -11,16 +13,13 @@
   justify-content: space-around;
   align-items: center;
   width: inherit;
-  /* todo: fm - use shared banner height*/
-  height: calc(100vh - 6rem);
 }
 
-.content {
-  width: 60rem;
-}
-
-.top-content {
-  display: flex;
+@media (min-width: width-mobile) {
+  .content-container {
+    /* todo: fm - use shared banner height*/
+    height: calc(100vh - 6rem);
+  }
 }
 
 .profile-image {
@@ -30,37 +29,62 @@
   border-radius: 3px;
 }
 
-.bio {
-  /* todo: fm - variabilise gutter*/
-  margin-left: 3rem;
+@media (max-width: width-mobile) {
+  .profile-image {
+    width: 8rem;
+  }
 
-  font-size: font-size-m;
-  text-align: justify;
+  .profile-image-container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-.bio-paragraph {
-  margin-bottom: 1rem;
-  line-height: 2.1rem;
+@media (min-width: width-desktop) {
+  .content {
+    /* todo: fm - share?*/
+    width: 60rem;
+  }
 
-  color: font-colour-primary;
+  .top-content {
+    display: flex;
+  }
+
+  .bio {
+    /* todo: fm - variabilise gutter*/
+    margin-left: 3rem;
+
+    font-size: font-size-m;
+    text-align: justify;
+  }
+
+  .bio-paragraph {
+    margin-bottom: 1rem;
+    line-height: 2.1rem;
+
+    color: font-colour-primary;
+  }
+
+  .known-tech {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .known-tech-heading {
+    font-size: font-size-ml;
+    border-bottom: 2px solid font-colour-primary;
+    margin-bottom: 1rem;
+  }
+
+  .tech-icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 45rem;
+    font-size: 2rem;
+  }
 }
 
-.known-tech {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.known-tech-heading {
-  font-size: font-size-ml;
-  border-bottom: 2px solid font-colour-primary;
-  margin-bottom: 1rem;
-}
-
-.tech-icons {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 45rem;
-  font-size: 2rem;
+@media (max-width: width-desktop) {
 }
