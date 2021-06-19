@@ -36,9 +36,8 @@ export function AboutSection() {
             </div>
           </div>
 
-          <div>
-            {/* debug: fm - */}
-            {/* <h3>Tech</h3> */}
+          <div className={styles['known-tech']}>
+            <h3 className={styles['known-tech-heading']}>Tech</h3>{' '}
             <div className={styles['tech-icons']}>
               {ABOUT_TECHS.map((tech) => (
                 <Technology key={tech.name} {...tech} />

@@ -1,5 +1,5 @@
 @value shared: "styles/shared.css";
-@value font-size-m, font-colour-primary from shared;
+@value font-size-m, font-size-ml, font-colour-primary, background-colour-secondary from shared;
 
 .main {
   /* todo: fm - variablise if sticks?*/
@@ -21,18 +21,18 @@
 
 .top-content {
   display: flex;
-  margin-bottom: 2.5rem;
 }
 
 .profile-image {
   width: 15rem;
-  /* todo: fm - add border? */
-  border-radius: 1px;
+
+  border: 3px solid background-colour-secondary;
+  border-radius: 3px;
 }
 
 .bio {
   /* todo: fm - variabilise gutter*/
-  margin-left: 5rem;
+  margin-left: 3rem;
 
   font-size: font-size-m;
   text-align: justify;
@@ -45,8 +45,22 @@
   color: font-colour-primary;
 }
 
+.known-tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.known-tech-heading {
+  font-size: font-size-ml;
+  border-bottom: 2px solid font-colour-primary;
+  margin-bottom: 1rem;
+}
+
 .tech-icons {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  width: 45rem;
   font-size: 2rem;
 }
