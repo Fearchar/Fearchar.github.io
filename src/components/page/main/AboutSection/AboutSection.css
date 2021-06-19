@@ -1,5 +1,5 @@
 @value shared: "styles/shared.css";
-@value width-mobile, width-desktop, font-size-m, font-size-ml, font-colour-primary, background-colour-secondary from shared;
+@value width-mobile, width-desktop,  font-size-s, font-size-m, font-size-ml, font-colour-primary,font-colour-primary-bold, background-colour-secondary from shared;
 
 @media (min-width: width-mobile) {
   .main {
@@ -56,26 +56,43 @@
   }
 }
 
-@media (min-width: width-desktop) {
+.top-content {
+  display: flex;
+}
+
+@media (max-width: width-mobile) {
   .top-content {
-    display: flex;
+    flex-direction: column;
   }
+}
 
+@media (min-width: width-mobile) {
   .bio {
-    /* todo: fm - variabilise gutter*/
     margin-left: 3rem;
-
-    font-size: font-size-m;
-    text-align: justify;
   }
+}
 
+.bio-paragraph {
+  font-size: font-size-m;
+  /* todo: fm - share?*/
+  margin-bottom: 1rem;
+  /* todo: fm - share?*/
+  line-height: 2.1rem;
+
+  color: font-colour-primary;
+}
+
+@media (max-width: width-mobile) {
   .bio-paragraph {
-    margin-bottom: 1rem;
-    line-height: 2.1rem;
+    font-size: font-size-s;
+    font-weight: bold;
+    line-height: 1.75rem;
 
-    color: font-colour-primary;
+    color: font-colour-primary-bold;
   }
+}
 
+@media (min-width: width-desktop) {
   .known-tech {
     display: flex;
     flex-direction: column;
