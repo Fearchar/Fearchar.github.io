@@ -31,7 +31,8 @@
 
 @media (max-width: width-mobile) {
   .profile-image {
-    width: 8rem;
+    width: 12rem;
+    margin-bottom: 2rem;
   }
 
   .profile-image-container {
@@ -40,12 +41,22 @@
   }
 }
 
-@media (min-width: width-desktop) {
+/* todo: fm - make happen at larger*/
+@media (min-width: width-mobile) {
   .content {
     /* todo: fm - share?*/
     width: 60rem;
   }
+}
 
+@media (max-width: width-mobile) {
+  .content {
+    /* todo: fm - share?*/
+    padding: 2rem;
+  }
+}
+
+@media (min-width: width-desktop) {
   .top-content {
     display: flex;
   }
