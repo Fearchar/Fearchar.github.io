@@ -66,6 +66,7 @@
   }
 }
 
+/* todo: fm - do we want to keep this min-width*/
 @media (min-width: width-mobile) {
   .bio {
     margin-left: 3rem;
@@ -92,27 +93,34 @@
   }
 }
 
-@media (min-width: width-desktop) {
-  .known-tech {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.known-tech {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.known-tech-heading {
+  font-size: font-size-ml;
+  border-bottom: 2px solid font-colour-primary;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: width-mobile) {
   .known-tech-heading {
-    font-size: font-size-ml;
-    border-bottom: 2px solid font-colour-primary;
-    margin-bottom: 1rem;
-  }
-
-  .tech-icons {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 45rem;
-    font-size: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
 
-@media (max-width: width-desktop) {
+.tech-icons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 45rem;
+  font-size: 2rem;
+}
+
+@media (max-width: width-mobile) {
+  .tech-icons {
+    width: 15rem;
+  }
 }
