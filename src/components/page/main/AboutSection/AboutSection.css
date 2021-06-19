@@ -119,6 +119,7 @@
   font-size: 2rem;
 }
 
+/* todo: fm - consider maing smaller on mobile*/
 @media (max-width: width-mobile) {
   .tech-icons {
     width: 15rem;

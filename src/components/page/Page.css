@@ -1,3 +1,6 @@
+@value shared: "styles/shared.css";
+@value background-colour-primary from shared;
+
 /* todo: fm - delete if not used*/
 .main {
   height: 100vh;
@@ -5,4 +8,6 @@
   -webkit-overflow-scrolling: touch;
 
   overflow-y: scroll;
+
+  background-color: background-colour-primary;
 }
