@@ -26,7 +26,7 @@ export function Page() {
       onScroll={() => manageHeroHeight(pageRef.current)}
     >
       {/* debug: fm - */}
-      {/* <Header atStartingPosition={atStartingPosition} pageRef={pageRef} /> */}
+      <Header atStartingPosition={atStartingPosition} pageRef={pageRef} />
 
       <main>
         <AboutSection />

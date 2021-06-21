@@ -13,7 +13,7 @@ export function Hero({ atStartingPosition, pageRef }) {
     <div
       id="hero"
       className={classNames(styles.main, {
-        [styles['is-reduced']]: !atStartingPosition
+        [styles['is-reduced']]: !atStartingPosition,
       })}
     >
       <div className={styles['content']}>
@@ -67,12 +67,13 @@ export function Hero({ atStartingPosition, pageRef }) {
             </div>
           </NewTabAnchor>
         </div>
+
         <i
           className={classNames(
             'fas fa-angle-down fa-4x',
             styles['down-arrow'],
             {
-              [styles['is-hidden']]: !atStartingPosition
+              [styles['is-hidden']]: !atStartingPosition,
             }
           )}
           /* todo: fm - this should trigger when you click anywhere on the page while the hero is big*/
