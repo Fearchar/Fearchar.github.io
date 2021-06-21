@@ -1,24 +1,31 @@
 @value shared: "styles/shared.css";
-@value width-mobile, width-desktop,  font-size-s, font-size-m, font-size-ml, font-colour-primary,font-colour-primary-bold, background-colour-secondary from shared;
-
-@media (min-width: width-mobile) {
-  .main {
-    /* todo: fm - variablise if sticks?*/
-    height: 100vh;
-  }
-}
+@value width-mobile, width-laptop, width-monitor, font-size-s, font-size-m, font-size-ml, font-colour-primary,font-colour-primary-bold, background-colour-secondary from shared;
 
 .content-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
   width: inherit;
+  padding: 2rem;
 }
 
-@media (min-width: width-mobile) {
+@media (min-width: width-laptop) and (max-width: width-monitor) {
   .content-container {
     /* todo: fm - use shared banner height*/
     height: calc(100vh - 6rem);
+  }
+}
+
+@media (min-width: width-monitor) {
+  .content-container {
+    padding: 4rem;
+  }
+}
+
+@media (max-width: width-desktop) {
+  .content-container {
+    padding: 4rem;
   }
 }
 
@@ -40,19 +47,11 @@
     justify-content: center;
   }
 }
-
 /* todo: fm - make happen at larger*/
 @media (min-width: width-mobile) {
   .content {
     /* todo: fm - share?*/
     width: 60rem;
-  }
-}
-
-@media (max-width: width-mobile) {
-  .content {
-    /* todo: fm - share?*/
-    padding: 2rem;
   }
 }
 

@@ -14,6 +14,7 @@
 @value font-size-xl: 5rem;
 
 /* todo: fm - remove any unused size*/
-@value width-mobile: 400px;
+@value width-mobile: 500px;
 @value width-tablet: 650px;
-@value width-desktop: 1000px;
+@value width-laptop: 1000px;
+@value width-monitor: 1500px;
