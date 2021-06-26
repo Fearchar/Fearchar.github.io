@@ -1,9 +1,8 @@
 class Tech {
-  constructor(name, iconName, priority, bioExclude=false) {
-    this.name = name,
-    this.iconName = iconName
+  constructor(name, iconName, priority, aboutExclude = false) {
+    ;(this.name = name), (this.iconName = iconName)
     this.priority = priority
-    this.bioExclude = bioExclude
+    this.aboutExclude = aboutExclude
   }
 }
 
@@ -26,10 +25,8 @@ let knownTechs = [
   new Tech('Heroku', 'heroku-original', 5)
 ]
 
-const otherTechs = [
-  new Tech('Bulma', null, null)
-]
+const otherTechs = [new Tech('Bulma', null, null)]
 
 knownTechs = knownTechs.sort((techA, techB) => techB.priority - techA.priority)
 
-export { Tech , knownTechs, otherTechs }
+export { Tech, knownTechs, otherTechs }

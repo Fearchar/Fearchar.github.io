@@ -1,21 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './scss/style.scss'
+import './styles/main.scss'
 
-import Page from './components/page/Page'
+import { Page } from './components/page/Page'
 
 class App extends React.Component {
   constructor() {
     super()
   }
-  render () {
-    return (
-      <Page />
-    )
+  render() {
+    return <Page />
   }
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-)
+ReactDOM.render(<App />, document.getElementById('root'))

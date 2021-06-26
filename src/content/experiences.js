@@ -1,5 +1,5 @@
 class Experience {
-  constructor(name, organisation, location, dates, desc, bullets=null) {
+  constructor(name, organisation, location, dates, desc, bullets = null) {
     this.name = name
     this.organisation = organisation
     this.location = location
@@ -9,7 +9,7 @@ class Experience {
   }
 }
 
-const Experiences = [
+const experiences = [
   new Experience(
     'Software Engineering Immersive',
     'General Assembly',
@@ -44,4 +44,4 @@ const Experiences = [
   )
 ]
 
-export default Experiences
+export default experiences
