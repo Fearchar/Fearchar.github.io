@@ -22,13 +22,16 @@ const ExperienceTemplate = ({ experience }) => {
             <p key={i}>{paragraph}</p>
           ))}
         {experience.bullets && (
-          <ul>
-            {experience.bullets.map((bullet, i) => (
-              <li key={i}>
-                <p>{bullet}</p>
-              </li>
-            ))}
-          </ul>
+          <>
+            <p className="responsibilities-header">Responsibilities:</p>
+            <ul>
+              {experience.bullets.map((bullet, i) => (
+                <li key={i}>
+                  <p>{bullet}</p>
+                </li>
+              ))}
+            </ul>
+          </>
         )}
       </div>
     </div>
