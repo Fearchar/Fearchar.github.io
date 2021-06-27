@@ -11,6 +11,20 @@ class Experience {
 
 const experiences = [
   new Experience(
+    'Associate Software Engineer - Full Stack',
+    'Wegotpop',
+    'London',
+    'January 2020 - Present',
+    'The Wegotpop platform enables the film and TV industry to hire supporting artists and manage crew. Clients include the likes of Pinewood Studios, Sky and AMC.',
+    [
+      'Build modern frontend components using React hooks and maintain existing pages built with classical components, JQuery and vanilla JS.',
+      'Build backend services in Python using primarily object oriented patterns, employing SQLAlchemy to build and query models and TurboGears to manage and process requests.',
+      'Work with a Postgres database, managing migrations with Alembic and SQLAlchemy. Write expressively typed code on both the frontend and backend using Typescript and Mypy.',
+      'Write test first code, employing libraries such as Jest and Pytest. Manage and estimate tasks across bi-weekly sprints using a mixed scrum / kanban approach.',
+      'Perform the technical planning for mid sized projects with the support of technical leads'
+    ]
+  ),
+  new Experience(
     'Software Engineering Immersive',
     'General Assembly',
     'London',
