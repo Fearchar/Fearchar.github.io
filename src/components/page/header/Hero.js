@@ -5,6 +5,8 @@ import textWhipAnimation from 'lib/textWhipAnimation'
 import SpanText from 'components/shared/SpanText'
 import { NewTabAnchor } from 'components/shared/NewTabAnchor'
 
+import { subTitle, tagLine } from 'content/hero'
+
 export function Hero({ isHeroFull, pageRef }) {
   const h1Ref = useRef(null)
   useEffect(() => textWhipAnimation(h1Ref.current), [isHeroFull])
@@ -15,10 +17,10 @@ export function Hero({ isHeroFull, pageRef }) {
         <SpanText text="Fearchar MacLean" />
       </h1>
 
-      <h2>A Full Stack Developer</h2>
-      {/* todo: fm - change tag line*/}
-      <p>with a passion for tabletop gaming,</p>
-      <p>music and literature</p>
+      <h2>{subTitle}</h2>
+      {tagLine.map((text, i) => (
+        <p key={i}>{text}</p>
+      ))}
 
       <div>
         <NewTabAnchor href="https://github.com/Fearchar">
